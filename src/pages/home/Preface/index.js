@@ -1,4 +1,5 @@
 import { Container, Box, Typography, Button } from "@mui/material";
+import ReactTyped from "react-typed";
 
 const Preface = () => {
   return (
@@ -6,7 +7,7 @@ const Preface = () => {
       maxWidth="lg"
       sx={{
         height: "100vh",
-        marginTop: "120px",
+        paddingTop: "25vh",
       }}
     >
       <Box
@@ -29,7 +30,13 @@ const Preface = () => {
           marginTop: "12px",
         }}
       >
-        WEB3 DOMAIN/IDENTITY/CHAT/POST
+        WEB3{" "}
+        <ReactTyped
+          strings={["DOMAIN", "IDENTITY", "CHAT", "POST"]}
+          typeSpeed={40}
+          backSpeed={50}
+          loop
+        />
       </Typography>
       <Typography
         sx={{
@@ -43,7 +50,7 @@ const Preface = () => {
       </Typography>
       <Box
         sx={{
-          marginTop: "24px",
+          marginTop: "40px",
           display: "flex",
           gap: "22px",
           height: "46px",
@@ -56,6 +63,9 @@ const Preface = () => {
             color: "#FD6262",
             border: "1px solid #FD6262",
             borderRadius: "10px",
+            "&:hover": {
+              background: "#ffffffcc",
+            },
           }}
         >
           REGISTY SNS DOMAIN
@@ -66,6 +76,9 @@ const Preface = () => {
             background: "#FD6262",
             color: "white",
             borderRadius: "10px",
+            "&:hover": {
+              background: "#FD6262cc",
+            },
           }}
         >
           JOIN LINKKEY CHAT

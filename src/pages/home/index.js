@@ -2,6 +2,13 @@ import { Box, useTheme } from "@mui/material";
 import Preface from "./Preface";
 import { useScreen } from "../../provider/screen";
 import Header from "../../components/Header";
+import SocialProtocol from "./SocialProtocol";
+import ProtocolData from "./ProtocolData";
+import TokenOmic from "./TokenOmic";
+import TryProduct from "./TryProduct";
+import DAO from "./DAO";
+import Cooperator from "./Cooperator";
+import Footer from "../../components/Footer";
 
 const Home = () => {
   const theme = useTheme();
@@ -14,11 +21,18 @@ const Home = () => {
       sx={{
         width: "100vw",
         height: "100vh",
-        // background: 'black'
       }}
     >
       <Header />
       <Preface />
+      <SocialProtocol />
+      <ProtocolData />
+      <TokenOmic />
+      <TryProduct />
+      <DAO />
+      <Cooperator />
+
+      <Footer />
     </Box>
   );
 };

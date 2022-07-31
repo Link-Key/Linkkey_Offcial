@@ -1,4 +1,6 @@
-import { Avatar, Box, Container, Link, styled } from "@mui/material";
+import { Box, Container, Link, styled } from "@mui/material";
+import { ReactComponent as Logo } from "../../assets/icon/logo.svg";
+import { linkList } from "../../config/const";
 
 const HeaderWrapper = styled(Box)(() => ({
   display: "flex",
@@ -22,33 +24,47 @@ const Header = () => {
     <Container
       maxWidth="lg"
       sx={{
+        position: "fixed",
+        minWidth: "100vw",
+        top: "0",
+        zIndex: "999",
+
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
         background: "white",
-        height: "120px",
+        height: "70px",
       }}
     >
       <HeaderWrapper>
-        <Link href="javascript;:" target="_blank" underline="none">
+        <Link href={linkList.docs} target="_blank" underline="none">
           Docs
         </Link>
-        <Link href="javascript;:" target="_blank" underline="none">
+        <Link href={linkList.blog} target="_blank" underline="none">
           Blog
         </Link>
-        <Link href="javascript;:" target="_blank" underline="none">
+        <Link href={linkList.whitePaper} target="_blank" underline="none">
           WhitePaper
         </Link>
-        <Link href="javascript;:" target="_blank" underline="none">
-          <Avatar src="https://joeschmoe.io/api/v1/random" />
+        <Link
+          href={linkList.docs}
+          target="_blank"
+          underline="none"
+          sx={{
+            svg: {
+              width: 100,
+            },
+          }}
+        >
+          <Logo />
         </Link>
-        <Link href="javascript;:" target="_blank" underline="none">
+        <Link href={linkList.sns} target="_blank" underline="none">
           SNS
         </Link>
-        <Link href="javascript;:" target="_blank" underline="none">
+        <Link href={linkList.linkChat} target="_blank" underline="none">
           LinkChat
         </Link>
-        <Link href="javascript;:" target="_blank" underline="none">
+        <Link href={linkList.roadMap} target="_blank" underline="none">
           RoadMap
         </Link>
       </HeaderWrapper>

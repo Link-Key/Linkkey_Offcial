@@ -19,11 +19,15 @@ const darkTheme = responsiveFontSizes(
       MuiButton: {
         styleOverrides: {
           root: {
-            fontSize: "14px",
-            fontWeight: 800,
+            fontSize: "18px",
+            fontWeight: 400,
             color: "white",
-            borderRadius: "40px",
+            background: "#FD6262",
+            borderRadius: "10px",
             textTransform: "none",
+            "&:hover": {
+              background: "#FD6262cc",
+            },
           },
         },
       },

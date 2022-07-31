@@ -1,7 +1,21 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: "SourceHanSansSC-regular";
+  font-family: "Inter";
+}
+html {
+  font-family: "Inter", "system-ui";
+}
+
+@supports (font-variation-settings: normal) {
+  html {
+    font-family: "Inter var", "system-ui";
+  }
+}
+
+* {
+  font-family: "Inter";
+  box-sizing: border-box;
 }
 
 @media (max-width: 475px) {
@@ -9,4 +23,21 @@ body {
   body {
     font-size: calc(100 * (100vw / 414)) !important;
   }
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 0px rgba(240, 240, 240, 0.5);
+  border-radius: 10px;
+  background-color: rgba(50, 50, 50, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  box-shadow: inset 0 0 0px rgba(240, 240, 240, 0.5);
+  background-color: #fff;
 }
