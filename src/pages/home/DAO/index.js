@@ -69,7 +69,7 @@ const DAO = () => {
         <Typography
           sx={{
             color: "#FD6262",
-            fontSize: "58px",
+            fontSize: { xs: "35px", md: "58px" },
             fontWeight: 700,
             marginTop: "12px",
           }}
@@ -81,7 +81,7 @@ const DAO = () => {
           variant="body2"
           sx={{
             color: "#9A9A9A",
-            fontSize: "18px",
+            fontSize: { xs: "15px", md: "20px" },
             textAlign: "center",
             marginTop: "22px",
           }}
@@ -92,7 +92,7 @@ const DAO = () => {
           variant="body2"
           sx={{
             color: "#9A9A9A",
-            fontSize: "18px",
+            fontSize: { xs: "15px", md: "20px" },
             textAlign: "center",
             marginTop: "5px",
           }}
@@ -104,7 +104,7 @@ const DAO = () => {
           variant="body2"
           sx={{
             color: "#9A9A9A",
-            fontSize: "18px",
+            fontSize: { xs: "15px", md: "20px" },
             textAlign: "center",
             marginTop: "5px",
           }}
@@ -120,13 +120,15 @@ const DAO = () => {
           justifyContent: "center",
           gap: "45px",
           marginTop: "24px",
+
+          flexWrap: { xs: "wrap", sm: "wrap", md: "row" },
         }}
       >
         <CardWrapper>
           <CardMedia
             component="img"
             sx={{
-              width: "443px",
+              maxWidth: "443px",
             }}
             image="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Ffile03.16sucai.com%2F2017%2F1100%2F16sucai_P591F9E071.JPG&refer=http%3A%2F%2Ffile03.16sucai.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1661786369&t=d88d4a07a1a0121ce97d8e822e059fd8"
           />
@@ -143,7 +145,7 @@ const DAO = () => {
           <CardMedia
             component="img"
             sx={{
-              width: "443px",
+              maxWidth: "443px",
             }}
             image="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Ffile03.16sucai.com%2F2017%2F1100%2F16sucai_P591F9E071.JPG&refer=http%3A%2F%2Ffile03.16sucai.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1661786369&t=d88d4a07a1a0121ce97d8e822e059fd8"
           />

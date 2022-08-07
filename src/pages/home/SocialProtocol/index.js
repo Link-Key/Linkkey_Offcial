@@ -6,10 +6,10 @@ const SocialProtocol = () => {
     <Container
       maxWidth="lg"
       sx={{
-        height: "100vh",
+        textAlign: "center",
         img: {
-          marginTop: "-100px",
-          maxWidth: "100%",
+          maxWidth: "80%",
+          marginBottom: "100px",
         },
       }}
     >
@@ -24,7 +24,7 @@ const SocialProtocol = () => {
         <Typography
           sx={{
             color: "#FD6262",
-            fontSize: "58px",
+            fontSize: { xs: "35px", md: "58px" },
             fontWeight: 700,
             marginTop: "12px",
           }}
@@ -36,7 +36,7 @@ const SocialProtocol = () => {
           variant="body2"
           sx={{
             color: "#9A9A9A",
-            fontSize: "18px",
+            fontSize: { xs: "15px", md: "20px" },
             textAlign: "center",
             marginTop: "22px",
           }}
@@ -47,7 +47,7 @@ const SocialProtocol = () => {
           variant="body2"
           sx={{
             color: "#9A9A9A",
-            fontSize: "18px",
+            fontSize: { xs: "15px", md: "20px" },
             textAlign: "center",
             marginTop: "5px",
           }}

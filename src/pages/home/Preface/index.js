@@ -9,17 +9,13 @@ const Preface = () => {
     <Container
       maxWidth="lg"
       sx={{
-        paddingTop: "35vh",
-        img: {
-          marginTop: "100px",
-          maxWidth: "100%",
-        },
+        paddingTop: { xs: "15vh", sm: "15vh", md: "35vh" },
       }}
     >
       <Box
         sx={{
           fontWeight: 900,
-          fontSize: "91px",
+          fontSize: { xs: "40px", sm: "70px", md: "91px" },
           color: "#FD6262",
           span: {
             color: "#333",
@@ -31,7 +27,7 @@ const Preface = () => {
       <Typography
         sx={{
           color: "#6C6C6C",
-          fontSize: "36px",
+          fontSize: { xs: "20px", sm: "25px", md: "36px" },
           fontWeight: 700,
           marginTop: "12px",
         }}
@@ -47,7 +43,7 @@ const Preface = () => {
       <Typography
         sx={{
           maxWidth: "943px",
-          fontSize: "20px",
+          fontSize: { xs: "15px", md: "20px" },
           color: "#9A9A9A",
           marginTop: "24px",
         }}
@@ -64,6 +60,7 @@ const Preface = () => {
           display: "flex",
           gap: "22px",
           height: "46px",
+          flexWrap: { xs: "wrap", sm: "wrap", md: "row" },
         }}
       >
         <Button
@@ -73,6 +70,7 @@ const Preface = () => {
             color: "#FD6262",
             border: "1px solid #FD6262",
             borderRadius: "10px",
+            fontSize: { xs: "15px", md: "20px" },
             "&:hover": {
               background: "#ffffffcc",
             },
@@ -87,6 +85,7 @@ const Preface = () => {
             background: "#FD6262",
             color: "white",
             borderRadius: "10px",
+            fontSize: { xs: "15px", md: "20px" },
             "&:hover": {
               background: "#FD6262cc",
             },
@@ -98,8 +97,18 @@ const Preface = () => {
           JOIN LINKKEY CHAT
         </Button>
       </Box>
-
-      <img src={SnsRelation} alt="snsRelation" />
+      <Box
+        sx={{
+          textAlign: "center",
+          img: {
+            marginTop: "100px",
+            maxWidth: "70%",
+            marginBottom: "100px",
+          },
+        }}
+      >
+        <img src={SnsRelation} alt="snsRelation" />
+      </Box>
     </Container>
   );
 };

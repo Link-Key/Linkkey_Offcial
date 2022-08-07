@@ -1,14 +1,8 @@
-import {
-  Container,
-  Divider,
-  Box,
-  Typography,
-  styled,
-  Link,
-} from "@mui/material";
+import { Container, Divider, Box, styled } from "@mui/material";
 import { ReactComponent as Logo } from "../../assets/icon/logo.svg";
 import OuterLink from "../OuterLink";
 
+// eslint-disable-next-line no-unused-vars
 const FooterItem = styled(Box)(() => ({
   display: "flex",
   flexDirection: "column",

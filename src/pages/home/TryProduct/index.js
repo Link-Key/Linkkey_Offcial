@@ -43,7 +43,7 @@ const TryProduct = () => {
         <Typography
           sx={{
             color: "#FD6262",
-            fontSize: "58px",
+            fontSize: { xs: "35px", md: "58px" },
             fontWeight: 700,
             marginTop: "12px",
           }}
@@ -55,7 +55,7 @@ const TryProduct = () => {
           variant="body2"
           sx={{
             color: "#9A9A9A",
-            fontSize: "18px",
+            fontSize: { xs: "15px", md: "20px" },
             textAlign: "center",
             marginTop: "22px",
           }}
@@ -66,7 +66,7 @@ const TryProduct = () => {
           variant="body2"
           sx={{
             color: "#9A9A9A",
-            fontSize: "18px",
+            fontSize: { xs: "15px", md: "20px" },
             textAlign: "center",
             marginTop: "5px",
           }}
@@ -82,6 +82,7 @@ const TryProduct = () => {
           justifyContent: "center",
           gap: "50px",
           marginTop: "55px",
+          flexWrap: { xs: "wrap", sm: "wrap", md: "row" },
         }}
       >
         <TryProductItem>

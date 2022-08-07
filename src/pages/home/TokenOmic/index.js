@@ -22,7 +22,7 @@ const TokenOmic = () => {
         <Typography
           sx={{
             color: "#FD6262",
-            fontSize: "58px",
+            fontSize: { xs: "35px", md: "58px" },
             fontWeight: 700,
             marginTop: "12px",
           }}
@@ -34,7 +34,7 @@ const TokenOmic = () => {
           variant="body2"
           sx={{
             color: "#9A9A9A",
-            fontSize: "18px",
+            fontSize: { xs: "15px", md: "20px" },
             textAlign: "center",
             marginTop: "22px",
           }}
@@ -45,7 +45,7 @@ const TokenOmic = () => {
           variant="body2"
           sx={{
             color: "#9A9A9A",
-            fontSize: "18px",
+            fontSize: { xs: "15px", md: "20px" },
             textAlign: "center",
             marginTop: "5px",
           }}
