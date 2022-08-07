@@ -9,6 +9,8 @@ import {
   CardContent,
 } from "@mui/material";
 import { ReactComponent as ArrowRight } from "../../../assets/icon/arrowRight.svg";
+import DAOImg1 from "../../../assets/images/dao.png";
+import DAOImg2 from "../../../assets/images/dao1.png";
 
 const CardWrapper = styled(Card)(() => ({
   width: "485px",
@@ -130,7 +132,7 @@ const DAO = () => {
             sx={{
               maxWidth: "443px",
             }}
-            image="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Ffile03.16sucai.com%2F2017%2F1100%2F16sucai_P591F9E071.JPG&refer=http%3A%2F%2Ffile03.16sucai.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1661786369&t=d88d4a07a1a0121ce97d8e822e059fd8"
+            image={DAOImg1}
           />
           <CardContent>
             <Typography>LINKKEY DAO</Typography>
@@ -147,7 +149,7 @@ const DAO = () => {
             sx={{
               maxWidth: "443px",
             }}
-            image="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Ffile03.16sucai.com%2F2017%2F1100%2F16sucai_P591F9E071.JPG&refer=http%3A%2F%2Ffile03.16sucai.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1661786369&t=d88d4a07a1a0121ce97d8e822e059fd8"
+            image={DAOImg2}
           />
           <CardContent>
             <Typography>LINKKEY TEAM DAO</Typography>

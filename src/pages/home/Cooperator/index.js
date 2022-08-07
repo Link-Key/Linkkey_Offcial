@@ -1,4 +1,14 @@
 import { Box, Container, styled, Typography } from "@mui/material";
+import polygon from "../../../assets/images/cooperator/polygon.jpg";
+import opensea from "../../../assets/images/cooperator/opensea.png";
+import rarible from "../../../assets/images/cooperator/rarible.png";
+import aragon from "../../../assets/images/cooperator/aragon.png";
+import xmtp from "../../../assets/images/cooperator/xmtp.png";
+import solid from "../../../assets/images/cooperator/solid.png";
+import kava from "../../../assets/images/cooperator/kava.png";
+import filecoin from "../../../assets/images/cooperator/filecoin.png";
+import lens from "../../../assets/images/cooperator/lens.png";
+import relation from "../../../assets/images/cooperator/relation.png";
 
 const CooperatorBoxItem = styled(Box)(() => ({
   width: "170px",
@@ -10,8 +20,20 @@ const CooperatorBoxItem = styled(Box)(() => ({
   fontWeight: 500,
 
   display: "flex",
+  flexDirection: "column",
   justifyContent: "center",
   alignItems: "center",
+  gap: "5px",
+
+  img: {
+    width: "40px",
+    // filter: "grayscale(1)",
+  },
+  svg: {
+    width: "40px",
+    height: "40px",
+    // filter: "grayscale(1)",
+  },
 }));
 
 const Cooperator = () => {
@@ -73,17 +95,47 @@ const Cooperator = () => {
           marginTop: "180px",
         }}
       >
-        <CooperatorBoxItem>Polygon Grant</CooperatorBoxItem>
-        <CooperatorBoxItem>Opensea</CooperatorBoxItem>
-        <CooperatorBoxItem>Rarible</CooperatorBoxItem>
-        <CooperatorBoxItem>Aragon</CooperatorBoxItem>
-        <CooperatorBoxItem>XMTP</CooperatorBoxItem>
+        <CooperatorBoxItem>
+          <img src={polygon} alt="polygon" />
+          Polygon
+        </CooperatorBoxItem>
+        <CooperatorBoxItem>
+          <img src={opensea} alt="opensea" />
+          Opensea
+        </CooperatorBoxItem>
+        <CooperatorBoxItem>
+          <img src={rarible} alt="rarible" />
+          Rarible
+        </CooperatorBoxItem>
+        <CooperatorBoxItem>
+          <img src={aragon} alt="aragon" />
+          Aragon
+        </CooperatorBoxItem>
+        <CooperatorBoxItem>
+          <img src={xmtp} alt="xmtp" />
+          XMTP
+        </CooperatorBoxItem>
 
-        <CooperatorBoxItem>SOLID</CooperatorBoxItem>
-        <CooperatorBoxItem>KAVA</CooperatorBoxItem>
-        <CooperatorBoxItem>Filecoin</CooperatorBoxItem>
-        <CooperatorBoxItem>Lens protocol </CooperatorBoxItem>
-        <CooperatorBoxItem>Relationlabs</CooperatorBoxItem>
+        <CooperatorBoxItem>
+          <img src={solid} alt="solid" />
+          SOLID
+        </CooperatorBoxItem>
+        <CooperatorBoxItem>
+          <img src={kava} alt="kava" />
+          KAVA
+        </CooperatorBoxItem>
+        <CooperatorBoxItem>
+          <img src={filecoin} alt="filecoin" />
+          Filecoin
+        </CooperatorBoxItem>
+        <CooperatorBoxItem>
+          <img src={lens} alt="lens" />
+          Lens protocol{" "}
+        </CooperatorBoxItem>
+        <CooperatorBoxItem>
+          <img src={relation} alt="relation" />
+          Relationlabs
+        </CooperatorBoxItem>
       </Box>
     </Container>
   );
