@@ -12,8 +12,13 @@ const LinkBtn = styled(Link)(() => ({
   justifyContent: "center",
   alignItems: "center",
   color: "black",
+  svg: {
+    color: "black",
+  },
   "&:hover": {
-    color: "#FB6D05",
+    svg: {
+      color: "#FB6D05",
+    },
   },
 }));
 

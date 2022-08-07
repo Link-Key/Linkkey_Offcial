@@ -38,11 +38,11 @@ const Footer = () => {
       <Divider
         sx={{
           borderColor: "#bbb",
-          borderWidth: "2px",
-          marginBottom: "20px",
+          borderWidth: "1px",
+          // marginBottom: "10px",
         }}
       />
-      <Box
+      {/* <Box
         sx={{
           display: "flex",
           justifyContent: "center",
@@ -87,13 +87,15 @@ const Footer = () => {
             <Typography variant="body2">FAQs</Typography>
           </Link>
         </FooterItem>
-      </Box>
+      </Box> */}
 
       <Box
         sx={{
           display: "flex",
+          flexDirection: { xs: "column", sm: "column", md: "row" },
           alignItems: "center",
           justifyContent: "space-between",
+          marginBottom: { xs: "50px", sm: "50px" },
         }}
       >
         <Box
@@ -101,7 +103,8 @@ const Footer = () => {
             display: "flex",
             alignItems: "center",
             color: "#fd6262",
-            marginTop: "30px",
+            marginTop: { md: "30px" },
+            cursor: "pointer",
             svg: {
               width: "150px",
             },
@@ -112,6 +115,16 @@ const Footer = () => {
               marginLeft: "-40px",
               marginTop: "-10px",
             },
+            position: "relative",
+            left: { xs: "-22px", sm: "-22px", md: "0" },
+            top: { xs: "50px", sm: "50px", md: "0" },
+          }}
+          onClick={() => {
+            const bodyEle = document.body;
+            bodyEle.scrollIntoView({
+              block: "start",
+              behavior: "smooth",
+            });
           }}
         >
           <Logo />

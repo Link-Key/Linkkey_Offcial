@@ -1,4 +1,5 @@
-import { Box, Container, styled, Typography, Button } from "@mui/material";
+import { Box, Container, Typography } from "@mui/material";
+import TokenOmicImg from "../../../assets/images/TokenOmic.png";
 
 const TokenOmic = () => {
   return (
@@ -6,6 +7,9 @@ const TokenOmic = () => {
       maxWidth="lg"
       sx={{
         marginTop: "90px",
+        img: {
+          maxWidth: "100%",
+        },
       }}
     >
       <Box
@@ -35,7 +39,7 @@ const TokenOmic = () => {
             marginTop: "22px",
           }}
         >
-          社区驱动型token经济
+          Community-driven tokenomic
         </Typography>
         <Typography
           variant="body2"
@@ -46,9 +50,12 @@ const TokenOmic = () => {
             marginTop: "5px",
           }}
         >
-          每注册1个域名会增发150KEY，持续到2024年12月（共计3年）将停止代币增发，具体的分配规则如下
+          150 KEY will be issued for every 1 domain registered, and will last
+          until December 2024 (3 years in total) when token issuance will stop,
+          with the following allocation rules
         </Typography>
       </Box>
+      <img src={TokenOmicImg} alt="TokenOmic" />
     </Container>
   );
 };

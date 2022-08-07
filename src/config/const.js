@@ -1,8 +1,12 @@
 export const linkList = {
-  docs: "https://www.baidu.com",
-  blog: "https://www.baidu.com",
-  whitePaper: "https://www.baidu.com",
-  sns: "https://www.baidu.com",
-  linkChat: "https://www.baidu.com",
-  roadMap: "https://www.baidu.com",
+  docs: "https://docs.linkkey.tech",
+  blog: "https://mirror.xyz/0x2e4e14FA1fe656679fBfcdfa9F08afcebd248e9e",
+  whitePaper: "https://linkkey.io/whitepaper",
+  sns: "https://sns.chat/",
+  linkChat: "#",
+  roadMap: "https://roadmap.linkkey.tech/",
+  github: "https://github.com/Link-Key",
+  twitter: "https://twitter.com/LinkkeyOfficial",
+  telegram: "https://t.me/linkkeydao",
+  discord: "https://discord.com/invite/UMNRQryyts",
 };

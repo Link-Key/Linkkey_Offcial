@@ -1,4 +1,5 @@
 import { Box, Container, Typography } from "@mui/material";
+import SocialProtocolImg from "../../../assets/images/socialProtocol.png";
 
 const SocialProtocol = () => {
   return (
@@ -6,6 +7,10 @@ const SocialProtocol = () => {
       maxWidth="lg"
       sx={{
         height: "100vh",
+        img: {
+          marginTop: "-100px",
+          maxWidth: "100%",
+        },
       }}
     >
       <Box
@@ -13,6 +18,7 @@ const SocialProtocol = () => {
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
+          position: "relative",
         }}
       >
         <Typography
@@ -35,7 +41,7 @@ const SocialProtocol = () => {
             marginTop: "22px",
           }}
         >
-          不做web3版本的推特
+          Not web3 version of Twitter
         </Typography>
         <Typography
           variant="body2"
@@ -46,9 +52,12 @@ const SocialProtocol = () => {
             marginTop: "5px",
           }}
         >
-          我们专注于小圈层的WEB3社交，我们不存储用户数据，我们热衷于构建开源&链上的应用
+          We focus on small circle WEB3 social, we don't store user data, we are
+          passionate about building open source & on-chain applications
         </Typography>
       </Box>
+
+      <img src={SocialProtocolImg} alt="SocialProtocolImg" />
     </Container>
   );
 };

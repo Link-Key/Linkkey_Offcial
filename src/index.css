@@ -18,10 +18,10 @@ html {
   box-sizing: border-box;
 }
 
-@media (max-width: 475px) {
+@media (max-width: 600px) {
   html,
   body {
-    font-size: calc(100 * (100vw / 414)) !important;
+    font-size: calc(100 * (100vw / 1440)) !important;
   }
 }
 

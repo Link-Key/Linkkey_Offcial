@@ -60,7 +60,7 @@ const TryProduct = () => {
             marginTop: "22px",
           }}
         >
-          围绕WEB3圈层化社交持续构建
+          Continuously build around WEB3 social networking
         </Typography>
         <Typography
           variant="body2"
@@ -71,8 +71,9 @@ const TryProduct = () => {
             marginTop: "5px",
           }}
         >
-          我们将持续构建一系列web3产品，逐步完善Linkkey的圈层化WEB3社交场景，为WEB3
-          市民提供有价值的服务
+          We will continue to build a series of web3 products to gradually
+          improve Linkkey's circle-based WEB3 social scene and provide valuable
+          services for WEB3 citizens
         </Typography>
       </Box>
       <Box

@@ -3,10 +3,10 @@ import CountUp from "react-countup";
 
 const DateItemBox = styled(Box)(() => ({
   minWidth: "300px",
-  padding: "50px 40px",
   border: "1px solid rgba(187, 187, 187, 100)",
   borderRadius: "10px",
   padding: "50px 30px",
+  textAlign: "center",
   span: {
     color: "#FD6262",
     fontSize: "48px",
@@ -54,7 +54,7 @@ const ProtocolData = () => {
             marginTop: "22px",
           }}
         >
-          链上实时数据
+          Real-time data on-chain
         </Typography>
         <Typography
           variant="body2"
@@ -65,14 +65,21 @@ const ProtocolData = () => {
             marginTop: "5px",
           }}
         >
-          WEB3 圈层社交数据在不断上升，更多人的加入是在壮大这个社区经济
+          WEB3 circle social data is on the rise, more people joining is growing
+          this community economy
         </Typography>
       </Box>
       <Box
         sx={{
           display: "flex",
-          justifyContent: "space-between",
+          justifyContent: {
+            lg: "space-between",
+            md: "space-between",
+            sm: "center",
+          },
           marginTop: "65px",
+          flexDirection: { lg: "row", md: "row", sm: "column", xs: "column" },
+          gap: { sm: "20px", xs: "20px" },
         }}
       >
         <DateItemBox>

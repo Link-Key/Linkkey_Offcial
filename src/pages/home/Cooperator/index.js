@@ -49,7 +49,7 @@ const Cooperator = () => {
             marginTop: "22px",
           }}
         >
-          持续采用新技术构建WEB3圈层社交
+          Continuing to adopt new technologies to build WEB3 circle social
         </Typography>
         <Typography
           variant="body2"
@@ -60,7 +60,8 @@ const Cooperator = () => {
             marginTop: "5px",
           }}
         >
-          我们在不断尝试新的技术方案，在开源的世界中进行持续的技术&产品组合
+          We are constantly experimenting with new technology solutions, with a
+          continuous technology & product portfolio in the open source world
         </Typography>
       </Box>
       <Box
@@ -73,16 +74,16 @@ const Cooperator = () => {
         }}
       >
         <CooperatorBoxItem>Polygon Grant</CooperatorBoxItem>
-        <CooperatorBoxItem>Polygon Grant</CooperatorBoxItem>
-        <CooperatorBoxItem>Polygon Grant</CooperatorBoxItem>
-        <CooperatorBoxItem>Polygon Grant</CooperatorBoxItem>
-        <CooperatorBoxItem>Polygon Grant</CooperatorBoxItem>
+        <CooperatorBoxItem>Opensea</CooperatorBoxItem>
+        <CooperatorBoxItem>Rarible</CooperatorBoxItem>
+        <CooperatorBoxItem>Aragon</CooperatorBoxItem>
+        <CooperatorBoxItem>XMTP</CooperatorBoxItem>
 
-        <CooperatorBoxItem>Polygon Grant</CooperatorBoxItem>
-        <CooperatorBoxItem>Polygon Grant</CooperatorBoxItem>
-        <CooperatorBoxItem>Polygon Grant</CooperatorBoxItem>
-        <CooperatorBoxItem>Polygon Grant</CooperatorBoxItem>
-        <CooperatorBoxItem>Polygon Grant</CooperatorBoxItem>
+        <CooperatorBoxItem>SOLID</CooperatorBoxItem>
+        <CooperatorBoxItem>KAVA</CooperatorBoxItem>
+        <CooperatorBoxItem>Filecoin</CooperatorBoxItem>
+        <CooperatorBoxItem>Lens protocol </CooperatorBoxItem>
+        <CooperatorBoxItem>Relationlabs</CooperatorBoxItem>
       </Box>
     </Container>
   );

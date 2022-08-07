@@ -86,7 +86,7 @@ const DAO = () => {
             marginTop: "22px",
           }}
         >
-          财务透明的web3 分布式协同组织
+          Financially Transparent web3 DAO
         </Typography>
         <Typography
           variant="body2"
@@ -97,7 +97,8 @@ const DAO = () => {
             marginTop: "5px",
           }}
         >
-          我们没有设立实体办公室，所有资产收入汇集到Linkkey DAO，
+          We don't have a physical office, and all asset income is pooled into
+          Linkkey DAO.
         </Typography>
         <Typography
           variant="body2"
@@ -108,8 +109,9 @@ const DAO = () => {
             marginTop: "5px",
           }}
         >
-          其中50%资金会划拨到LinkkeyTeam
-          DAO用于项目长期运营，Aragon为我们提供技术&产品支持
+          50% of the funds will be allocated to LinkkeyTeam DAO for the
+          long-term operation of the project, and Aragon provides technical &
+          product support for us.
         </Typography>
       </Box>
       <Box

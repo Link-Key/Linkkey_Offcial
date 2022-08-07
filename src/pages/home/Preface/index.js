@@ -1,19 +1,25 @@
 import { Container, Box, Typography, Button } from "@mui/material";
 import ReactTyped from "react-typed";
+import SnsRelation from "../../../assets/images/snsRelation.png";
+import ToastMention from "../../../components/ToastMention";
+import { linkList } from "../../../config/const";
 
 const Preface = () => {
   return (
     <Container
       maxWidth="lg"
       sx={{
-        height: "100vh",
-        paddingTop: "25vh",
+        paddingTop: "35vh",
+        img: {
+          marginTop: "100px",
+          maxWidth: "100%",
+        },
       }}
     >
       <Box
         sx={{
           fontWeight: 900,
-          fontSize: "90px",
+          fontSize: "91px",
           color: "#FD6262",
           span: {
             color: "#333",
@@ -40,13 +46,17 @@ const Preface = () => {
       </Typography>
       <Typography
         sx={{
-          width: "943px",
+          maxWidth: "943px",
           fontSize: "20px",
           color: "#9A9A9A",
           marginTop: "24px",
         }}
       >
-        LINKKEY是构建WEB3圈层社交的通用协议，SNS个人域名服务打造圈层社交身份体系，LINKNFT合约定义好友与群组关系，LINKCHAT实现好友&群组间的加密通讯，LINKPOST构建好友间的圈层社交互动
+        LINKKEY is a universal protocol for building WEB3 social circles, SNS
+        personal domain name service to create a social identity system for
+        circles, LINKNFT contract to define the relationship between friends and
+        groups, LINKCHAT to achieve encrypted communication between friends &
+        groups, LINKPOST to build social interaction between friends in circles
       </Typography>
       <Box
         sx={{
@@ -67,6 +77,7 @@ const Preface = () => {
               background: "#ffffffcc",
             },
           }}
+          href={linkList.sns}
         >
           REGISTY SNS DOMAIN
         </Button>
@@ -80,10 +91,15 @@ const Preface = () => {
               background: "#FD6262cc",
             },
           }}
+          onClick={() => {
+            ToastMention({ message: "Coming soon!" });
+          }}
         >
           JOIN LINKKEY CHAT
         </Button>
       </Box>
+
+      <img src={SnsRelation} alt="snsRelation" />
     </Container>
   );
 };
