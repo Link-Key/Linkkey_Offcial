@@ -9,4 +9,6 @@ export const linkList = {
   twitter: "https://twitter.com/LinkkeyOfficial",
   telegram: "https://t.me/linkkeydao",
   discord: "https://discord.com/invite/UMNRQryyts",
+  dao: "https://client.aragon.org/#/linkkey.aragonid.eth",
+  teamDao: "https://client.aragon.org/#/linkkeyteam.aragonid.eth",
 };

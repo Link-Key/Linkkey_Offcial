@@ -11,6 +11,7 @@ import {
 import { ReactComponent as ArrowRight } from "../../../assets/icon/arrowRight.svg";
 import DAOImg1 from "../../../assets/images/dao.png";
 import DAOImg2 from "../../../assets/images/dao1.png";
+import { linkList } from "../../../config/const";
 
 const CardWrapper = styled(Card)(() => ({
   width: "485px",
@@ -137,7 +138,7 @@ const DAO = () => {
           <CardContent>
             <Typography>LINKKEY DAO</Typography>
             <Typography variant="body2">By Aragon</Typography>
-            <Link>
+            <Link href={linkList.dao} target="_target">
               <ArrowRight />
             </Link>
           </CardContent>
@@ -154,7 +155,7 @@ const DAO = () => {
           <CardContent>
             <Typography>LINKKEY TEAM DAO</Typography>
             <Typography variant="body2">By Aragon</Typography>
-            <Link>
+            <Link href={linkList.teamDao} target="_target">
               <ArrowRight />
             </Link>
           </CardContent>
