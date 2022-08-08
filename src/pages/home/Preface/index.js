@@ -1,4 +1,8 @@
 import { Container, Box, Typography, Button } from "@mui/material";
+import { memo } from "react";
+import { Fade } from "react-reveal";
+import LightSpeed from "react-reveal/LightSpeed";
+
 import ReactTyped from "react-typed";
 import SnsRelation from "../../../assets/images/snsRelation.png";
 import ToastMention from "../../../components/ToastMention";
@@ -24,22 +28,25 @@ const Preface = () => {
       >
         <span>BUILD</span> CIRCLE SOCIAL <span>ON</span> WEB3
       </Box>
-      <Typography
-        sx={{
-          color: "#6C6C6C",
-          fontSize: { xs: "20px", sm: "25px", md: "36px" },
-          fontWeight: 700,
-          marginTop: "12px",
-        }}
-      >
-        WEB3{" "}
-        <ReactTyped
-          strings={["DOMAIN", "IDENTITY", "CHAT", "POST"]}
-          typeSpeed={40}
-          backSpeed={50}
-          loop
-        />
-      </Typography>
+      <LightSpeed right>
+        <Typography
+          sx={{
+            color: "#6C6C6C",
+            fontSize: { xs: "20px", sm: "25px", md: "36px" },
+            fontWeight: 700,
+            marginTop: "12px",
+          }}
+        >
+          WEB3{" "}
+          <ReactTyped
+            strings={["DOMAIN", "IDENTITY", "CHAT", "POST"]}
+            typeSpeed={40}
+            backSpeed={50}
+            loop
+            style={{ color: "#FD6262" }}
+          />
+        </Typography>
+      </LightSpeed>
       <Typography
         sx={{
           maxWidth: "943px",
@@ -97,20 +104,22 @@ const Preface = () => {
           JOIN LINKKEY CHAT
         </Button>
       </Box>
-      <Box
-        sx={{
-          textAlign: "center",
-          img: {
-            marginTop: "100px",
-            maxWidth: "70%",
-            marginBottom: "100px",
-          },
-        }}
-      >
-        <img src={SnsRelation} alt="snsRelation" />
-      </Box>
+      <Fade left big>
+        <Box
+          sx={{
+            textAlign: "center",
+            img: {
+              marginTop: "100px",
+              maxWidth: "70%",
+              marginBottom: "100px",
+            },
+          }}
+        >
+          <img src={SnsRelation} alt="snsRelation" />
+        </Box>
+      </Fade>
     </Container>
   );
 };
 
-export default Preface;
+export default memo(Preface);

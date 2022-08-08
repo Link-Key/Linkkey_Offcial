@@ -1,5 +1,6 @@
 import { Box, Container, styled, Typography, Button } from "@mui/material";
 import CountUp from "react-countup";
+import Flip from "react-reveal/Flip";
 
 const DateItemBox = styled(Box)(() => ({
   minWidth: "300px",
@@ -82,21 +83,27 @@ const ProtocolData = () => {
           gap: { sm: "20px", xs: "20px" },
         }}
       >
-        <DateItemBox>
-          <CountUp start={0} end={3000345} separator="," duration={2} />
-          <Typography>Total Supply</Typography>
-          <ButtonWrapper>To Polygonscan</ButtonWrapper>
-        </DateItemBox>
-        <DateItemBox>
-          <CountUp start={0} end={100345} separator="," />
-          <Typography>Total Supply</Typography>
-          <ButtonWrapper>To Polygonscan</ButtonWrapper>
-        </DateItemBox>
-        <DateItemBox>
-          <CountUp start={0} end={20215} separator="," />
-          <Typography>Total Supply</Typography>
-          <ButtonWrapper>To Polygonscan</ButtonWrapper>
-        </DateItemBox>
+        <Flip right>
+          <DateItemBox>
+            <CountUp start={0} end={3000345} separator="," duration={2} />
+            <Typography>Total Supply</Typography>
+            <ButtonWrapper>To Polygonscan</ButtonWrapper>
+          </DateItemBox>
+        </Flip>
+        <Flip right>
+          <DateItemBox>
+            <CountUp start={0} end={100345} separator="," />
+            <Typography>Total Supply</Typography>
+            <ButtonWrapper>To Polygonscan</ButtonWrapper>
+          </DateItemBox>
+        </Flip>
+        <Flip right>
+          <DateItemBox>
+            <CountUp start={0} end={20215} separator="," />
+            <Typography>Total Supply</Typography>
+            <ButtonWrapper>To Polygonscan</ButtonWrapper>
+          </DateItemBox>
+        </Flip>
       </Box>
     </Container>
   );

@@ -9,6 +9,7 @@ import {
 } from "@mui/material";
 import { useState } from "react";
 import { ReactComponent as ArrowRight } from "../../../assets/icon/arrowRight.svg";
+import Zoom from "react-reveal/Zoom";
 
 const FlipBox = styled(Box)(({ rotate }) => ({
   position: "relative",
@@ -120,96 +121,99 @@ const TryProduct = () => {
           perspective: "8000px",
         }}
       >
-        <FlipBox rotate={isSNSRotate}>
-          <TryProductItem className="face front-side">
-            <Typography>SNS</Typography>
-            <Link
-              onClick={() => {
-                setIsSNSRotate(true);
-              }}
-            >
-              <ArrowRight />
-            </Link>
-          </TryProductItem>
-          <TryProductItem className="face back-side">
-            <Link
-              onClick={() => {
-                setIsSNSRotate(false);
-              }}
-            >
-              <ArrowRight />
-            </Link>
-            <List
-              sx={{
-                display: "flex",
-                flexDirection: "column",
-                gap: "20px",
-                li: {
-                  color: "#9a9a9a",
-                  fontSize: { xs: "15px", md: "20px" },
-                },
-              }}
-            >
-              <ListItem>
-                - SNS is a decentralized personal social name service
-              </ListItem>
+        <Zoom left>
+          <FlipBox rotate={isSNSRotate}>
+            <TryProductItem className="face front-side">
+              <Typography>SNS</Typography>
+              <Link
+                onClick={() => {
+                  setIsSNSRotate(true);
+                }}
+              >
+                <ArrowRight />
+              </Link>
+            </TryProductItem>
+            <TryProductItem className="face back-side">
+              <Link
+                onClick={() => {
+                  setIsSNSRotate(false);
+                }}
+              >
+                <ArrowRight />
+              </Link>
+              <List
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "20px",
+                  li: {
+                    color: "#9a9a9a",
+                    fontSize: { xs: "15px", md: "20px" },
+                  },
+                }}
+              >
+                <ListItem>
+                  - SNS is a decentralized personal social name service
+                </ListItem>
 
-              <ListItem>
-                - SNS domain name is a WEB3 DID to enter Linkkey ecology
-              </ListItem>
-              <ListItem>- SNS supports multi-currency payments</ListItem>
-              <ListItem>- SNS is a Dapp deployed on Polygon</ListItem>
-            </List>
-          </TryProductItem>
-        </FlipBox>
+                <ListItem>
+                  - SNS domain name is a WEB3 DID to enter Linkkey ecology
+                </ListItem>
+                <ListItem>- SNS supports multi-currency payments</ListItem>
+                <ListItem>- SNS is a Dapp deployed on Polygon</ListItem>
+              </List>
+            </TryProductItem>
+          </FlipBox>
+        </Zoom>
+        <Zoom right>
+          <FlipBox rotate={isChatRotate}>
+            <TryProductItem className="face front-side">
+              <Typography>CHAT</Typography>
+              <Link
+                onClick={() => {
+                  setIsChatRotate(true);
+                }}
+              >
+                <ArrowRight />
+              </Link>
+            </TryProductItem>
 
-        <FlipBox rotate={isChatRotate}>
-          <TryProductItem className="face front-side">
-            <Typography>CHAT</Typography>
-            <Link
-              onClick={() => {
-                setIsChatRotate(true);
-              }}
-            >
-              <ArrowRight />
-            </Link>
-          </TryProductItem>
+            <TryProductItem className="face back-side">
+              <Link
+                onClick={() => {
+                  setIsChatRotate(false);
+                }}
+              >
+                <ArrowRight />
+              </Link>
+              <List
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "20px",
+                  li: {
+                    color: "#9a9a9a",
+                    fontSize: { xs: "15px", md: "20px" },
+                  },
+                }}
+              >
+                <ListItem>
+                  - CHAT is the first vehicle for circle socialization
+                </ListItem>
 
-          <TryProductItem className="face back-side">
-            <Link
-              onClick={() => {
-                setIsChatRotate(false);
-              }}
-            >
-              <ArrowRight />
-            </Link>
-            <List
-              sx={{
-                display: "flex",
-                flexDirection: "column",
-                gap: "20px",
-                li: {
-                  color: "#9a9a9a",
-                  fontSize: { xs: "15px", md: "20px" },
-                },
-              }}
-            >
-              <ListItem>
-                - CHAT is the first vehicle for circle socialization
-              </ListItem>
-
-              <ListItem>
-                - CHAT realizes the definition of friend relationship by issuing
-                NFT
-              </ListItem>
-              <ListItem>
-                - CHAT realizes the construction of groups by issuing NFTs
-              </ListItem>
-              <ListItem>- CHAT is a pure WEB3 application</ListItem>
-              <ListItem>- CHAT is built on XMTP Network</ListItem>
-            </List>
-          </TryProductItem>
-        </FlipBox>
+                <ListItem>
+                  - CHAT realizes the definition of friend relationship by
+                  issuing NFT
+                </ListItem>
+                <ListItem>
+                  - CHAT realizes the construction of groups by issuing NFTs
+                </ListItem>
+                <ListItem>- CHAT is a pure WEB3 application</ListItem>
+                <ListItem>- CHAT is built on XMTP Network</ListItem>
+              </List>
+            </TryProductItem>
+          </FlipBox>
+        </Zoom>
       </Box>
     </Container>
   );

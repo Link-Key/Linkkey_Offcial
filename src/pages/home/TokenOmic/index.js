@@ -1,4 +1,5 @@
 import { Box, Container, Typography } from "@mui/material";
+import { Fade } from "react-reveal";
 import TokenOmicImg from "../../../assets/images/TokenOmic.png";
 
 const TokenOmic = () => {
@@ -55,7 +56,9 @@ const TokenOmic = () => {
           with the following allocation rules
         </Typography>
       </Box>
-      <img src={TokenOmicImg} alt="TokenOmic" />
+      <Fade bottom big>
+        <img src={TokenOmicImg} alt="TokenOmic" />
+      </Fade>
     </Container>
   );
 };

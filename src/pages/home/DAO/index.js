@@ -12,6 +12,7 @@ import { ReactComponent as ArrowRight } from "../../../assets/icon/arrowRight.sv
 import DAOImg1 from "../../../assets/images/dao.png";
 import DAOImg2 from "../../../assets/images/dao1.png";
 import { linkList } from "../../../config/const";
+import Roll from "react-reveal/Roll";
 
 const CardWrapper = styled(Card)(() => ({
   width: "485px",
@@ -127,39 +128,42 @@ const DAO = () => {
           flexWrap: { xs: "wrap", sm: "wrap", md: "row" },
         }}
       >
-        <CardWrapper>
-          <CardMedia
-            component="img"
-            sx={{
-              maxWidth: "443px",
-            }}
-            image={DAOImg1}
-          />
-          <CardContent>
-            <Typography>LINKKEY DAO</Typography>
-            <Typography variant="body2">By Aragon</Typography>
-            <Link href={linkList.dao} target="_target">
-              <ArrowRight />
-            </Link>
-          </CardContent>
-        </CardWrapper>
-
-        <CardWrapper>
-          <CardMedia
-            component="img"
-            sx={{
-              maxWidth: "443px",
-            }}
-            image={DAOImg2}
-          />
-          <CardContent>
-            <Typography>LINKKEY TEAM DAO</Typography>
-            <Typography variant="body2">By Aragon</Typography>
-            <Link href={linkList.teamDao} target="_target">
-              <ArrowRight />
-            </Link>
-          </CardContent>
-        </CardWrapper>
+        <Roll top>
+          <CardWrapper>
+            <CardMedia
+              component="img"
+              sx={{
+                maxWidth: "443px",
+              }}
+              image={DAOImg2}
+            />
+            <CardContent>
+              <Typography>LINKKEY DAO</Typography>
+              <Typography variant="body2">By Aragon</Typography>
+              <Link href={linkList.dao} target="_target">
+                <ArrowRight />
+              </Link>
+            </CardContent>
+          </CardWrapper>
+        </Roll>
+        <Roll bottom>
+          <CardWrapper>
+            <CardMedia
+              component="img"
+              sx={{
+                maxWidth: "443px",
+              }}
+              image={DAOImg1}
+            />
+            <CardContent>
+              <Typography>LINKKEY TEAM DAO</Typography>
+              <Typography variant="body2">By Aragon</Typography>
+              <Link href={linkList.teamDao} target="_target">
+                <ArrowRight />
+              </Link>
+            </CardContent>
+          </CardWrapper>
+        </Roll>
       </Box>
     </Container>
   );

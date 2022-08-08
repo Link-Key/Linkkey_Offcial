@@ -1,4 +1,6 @@
 import { Box, Container, Typography } from "@mui/material";
+import { memo } from "react";
+import { Fade } from "react-reveal";
 import SocialProtocolImg from "../../../assets/images/socialProtocol.png";
 
 const SocialProtocol = () => {
@@ -56,10 +58,11 @@ const SocialProtocol = () => {
           passionate about building open source & on-chain applications
         </Typography>
       </Box>
-
-      <img src={SocialProtocolImg} alt="SocialProtocolImg" />
+      <Fade left big>
+        <img src={SocialProtocolImg} alt="SocialProtocolImg" />
+      </Fade>
     </Container>
   );
 };
 
-export default SocialProtocol;
+export default memo(SocialProtocol);
