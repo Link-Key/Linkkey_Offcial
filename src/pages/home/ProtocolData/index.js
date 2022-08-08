@@ -85,23 +85,29 @@ const ProtocolData = () => {
       >
         <Flip right>
           <DateItemBox>
-            <CountUp start={0} end={3000345} separator="," duration={2} />
+            <CountUp start={0} end={3083250} separator="," duration={2} />
             <Typography>Total Supply</Typography>
-            <ButtonWrapper>To Polygonscan</ButtonWrapper>
+            <ButtonWrapper href="https://polygonscan.com/token/0x5CA9A8405499a1Ee8fbB1849f197b2b7e518985f">
+              To Polygonscan
+            </ButtonWrapper>
           </DateItemBox>
         </Flip>
         <Flip right>
           <DateItemBox>
-            <CountUp start={0} end={100345} separator="," />
-            <Typography>Total Supply</Typography>
-            <ButtonWrapper>To Polygonscan</ButtonWrapper>
+            <CountUp start={0} end={10173} separator="," />
+            <Typography>Total Holders</Typography>
+            <ButtonWrapper href="https://polygonscan.com/token/0x5CA9A8405499a1Ee8fbB1849f197b2b7e518985f">
+              To Polygonscan
+            </ButtonWrapper>
           </DateItemBox>
         </Flip>
         <Flip right>
           <DateItemBox>
-            <CountUp start={0} end={20215} separator="," />
-            <Typography>Total Supply</Typography>
-            <ButtonWrapper>To Polygonscan</ButtonWrapper>
+            <CountUp start={0} end={20555} separator="," />
+            <Typography>Total DIDs</Typography>
+            <ButtonWrapper href="https://polygonscan.com/token/0x19ad2b1f012349645c3173ea63f98948a2b43d27">
+              To Polygonscan
+            </ButtonWrapper>
           </DateItemBox>
         </Flip>
       </Box>
