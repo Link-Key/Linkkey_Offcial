@@ -14,10 +14,11 @@ import { useState } from "react";
 import { ReactComponent as Logo } from "../../assets/icon/logo.svg";
 import { linkList } from "../../config/const";
 import ToastMention from "../ToastMention";
+import DehazeIcon from "@mui/icons-material/Dehaze";
 
 const HeaderWrapper = styled(Box)(() => ({
   display: "flex",
-  justifyContent: "space-around",
+  justifyContent: "space-between",
   alignContent: "center",
   listStyleType: "none",
   fontSize: "16px",
@@ -112,6 +113,24 @@ const Header = () => {
           display: { xs: "block", sm: "none" },
         }}
       >
+        <IconButton
+          sx={{
+            width: "35px",
+            position: "absolute",
+            top: "-20px",
+            left: "10px",
+            bottom: 0,
+            right: 0,
+          }}
+          onClick={handleDrawerOpen}
+        >
+          <DehazeIcon
+            sx={{
+              fontSize: 35,
+              color: "black",
+            }}
+          />
+        </IconButton>
         <Link
           target="_blank"
           underline="none"
@@ -119,8 +138,15 @@ const Header = () => {
             svg: {
               width: 100,
             },
+            cursor: "pointer",
           }}
-          onClick={handleDrawerOpen}
+          onClick={() => {
+            const bodyEle = document.body;
+            bodyEle.scrollIntoView({
+              block: "start",
+              behavior: "smooth",
+            });
+          }}
         >
           <Logo />
         </Link>

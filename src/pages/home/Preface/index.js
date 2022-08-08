@@ -13,7 +13,7 @@ const Preface = () => {
     <Container
       maxWidth="lg"
       sx={{
-        paddingTop: { xs: "15vh", sm: "15vh", md: "35vh" },
+        paddingTop: { xs: "15vh", sm: "15vh", md: "25vh" },
       }}
     >
       <Box
