@@ -12,7 +12,7 @@ import { ReactComponent as ArrowRight } from "../../../assets/icon/arrowRight.sv
 import DAOImg1 from "../../../assets/images/dao.png";
 import DAOImg2 from "../../../assets/images/dao1.png";
 import { linkList } from "../../../config/const";
-import Roll from "react-reveal/Roll";
+import Zoom from "react-reveal/Zoom";
 
 const CardWrapper = styled(Card)(() => ({
   width: "485px",
@@ -128,7 +128,7 @@ const DAO = () => {
           flexWrap: { xs: "wrap", sm: "wrap", md: "row" },
         }}
       >
-        <Roll top>
+        <Zoom left>
           <CardWrapper>
             <CardMedia
               component="img"
@@ -145,8 +145,8 @@ const DAO = () => {
               </Link>
             </CardContent>
           </CardWrapper>
-        </Roll>
-        <Roll bottom>
+        </Zoom>
+        <Zoom right>
           <CardWrapper>
             <CardMedia
               component="img"
@@ -163,7 +163,7 @@ const DAO = () => {
               </Link>
             </CardContent>
           </CardWrapper>
-        </Roll>
+        </Zoom>
       </Box>
     </Container>
   );

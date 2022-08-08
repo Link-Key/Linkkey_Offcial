@@ -1,5 +1,6 @@
 import { Container, Divider, Box, styled } from "@mui/material";
-import { ReactComponent as Logo } from "../../assets/icon/logo.svg";
+// import { ReactComponent as Logo } from "../../assets/icon/logo.svg";
+import Logo from "../../assets/images/logo.png";
 import OuterLink from "../OuterLink";
 
 // eslint-disable-next-line no-unused-vars
@@ -87,46 +88,17 @@ const Footer = () => {
         sx={{
           display: "flex",
           flexDirection: { xs: "column", sm: "column", md: "row" },
+          gap: { xs: "20px", sm: "20px", md: "0" },
           alignItems: "center",
           justifyContent: "space-between",
-          marginBottom: { xs: "50px", sm: "50px" },
+          margin: { xs: "50px 0", sm: "50px 0" },
+          img: { width: "150px" },
         }}
       >
+        <img src={Logo} alt="logo" />
         <Box
           sx={{
-            display: "flex",
-            alignItems: "center",
-            color: "#fd6262",
-            marginTop: { md: "30px" },
-            cursor: "pointer",
-            svg: {
-              width: "150px",
-            },
-            span: {
-              fontSize: "50px",
-              color: "#fd6262",
-              fontWeight: "600",
-              marginLeft: "-40px",
-              marginTop: "-10px",
-            },
-            position: "relative",
-            left: { xs: "-22px", sm: "-22px", md: "0" },
-            top: { xs: "50px", sm: "50px", md: "0" },
-          }}
-          onClick={() => {
-            const bodyEle = document.body;
-            bodyEle.scrollIntoView({
-              block: "start",
-              behavior: "smooth",
-            });
-          }}
-        >
-          <Logo />
-          <span>LINKKEY</span>
-        </Box>
-        <Box
-          sx={{
-            marginTop: "20px",
+            // marginTop: "20px",
             svg: {
               color: "grey",
             },

@@ -127,7 +127,7 @@ const Header = () => {
           <DehazeIcon
             sx={{
               fontSize: 35,
-              color: "black",
+              color: "#FD6262",
             }}
           />
         </IconButton>
