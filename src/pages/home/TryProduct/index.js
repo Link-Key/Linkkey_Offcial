@@ -114,7 +114,6 @@ const TryProduct = () => {
       <Box
         sx={{
           display: "flex",
-          maxWidth: "485px",
           justifyContent: "center",
           gap: "50px",
           marginTop: "55px",
