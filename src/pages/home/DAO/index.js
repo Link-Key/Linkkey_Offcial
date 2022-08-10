@@ -12,10 +12,10 @@ import { ReactComponent as ArrowRight } from "../../../assets/icon/arrowRight.sv
 import DAOImg1 from "../../../assets/images/dao.png";
 import DAOImg2 from "../../../assets/images/dao1.png";
 import { linkList } from "../../../config/const";
-import Zoom from "react-reveal/Zoom";
+import Fade from "react-reveal/Fade";
 
 const CardWrapper = styled(Card)(() => ({
-  width: "485px",
+  maxWidth: "485px",
   padding: "22px",
   borderRadius: "10px",
   background: "white",
@@ -128,7 +128,7 @@ const DAO = () => {
           flexWrap: { xs: "wrap", sm: "wrap", md: "row" },
         }}
       >
-        <Zoom left>
+        <Fade left big>
           <CardWrapper>
             <CardMedia
               component="img"
@@ -145,8 +145,8 @@ const DAO = () => {
               </Link>
             </CardContent>
           </CardWrapper>
-        </Zoom>
-        <Zoom right>
+        </Fade>
+        <Fade right big>
           <CardWrapper>
             <CardMedia
               component="img"
@@ -163,7 +163,7 @@ const DAO = () => {
               </Link>
             </CardContent>
           </CardWrapper>
-        </Zoom>
+        </Fade>
       </Box>
     </Container>
   );
