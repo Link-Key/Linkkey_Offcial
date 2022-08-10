@@ -41,7 +41,7 @@ jobs:
       # Deploy to target server
       # 1. ssh-keygen -m PEM -t rsa -b 4096
       # 2. cat id_rsa.pub >> authorized_keys
-			# 3. cat id_rsa, and copy to github action, named is ACCESS_TOKEN
+      # 3. cat id_rsa, and copy to github action, named is ACCESS_TOKEN
       - name: Deploy static front-end
         uses: easingthemes/ssh-deploy@main
         env:
