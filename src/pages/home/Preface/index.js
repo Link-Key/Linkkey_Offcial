@@ -81,7 +81,7 @@ const Preface = () => {
               width: "270px",
               background: "white",
               color: "#FD6262",
-              border: "1px solid #FD6262",
+              border: "2px solid #FD6262",
               borderRadius: "10px",
               fontSize: { xs: "15px", md: "20px" },
               "&:hover": {
