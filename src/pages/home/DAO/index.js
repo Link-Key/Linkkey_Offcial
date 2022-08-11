@@ -20,6 +20,7 @@ const CardWrapper = styled(Card)(() => ({
   borderRadius: "10px",
   background: "white",
   border: "1px solid rgba(187, 187, 187, 100)",
+  boxShadow: "none",
   img: {
     borderRadius: "10px",
   },
