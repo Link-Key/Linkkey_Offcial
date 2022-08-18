@@ -16,7 +16,7 @@ const FlipBox = styled(Box)(({ rotate }) => ({
   // width: "485px",
   height: "565px",
   cursor: "pointer",
-  transition: "1s ease-in-out",
+  transition: ".5s ease-in-out",
   transformStyle: "preserve-3d",
   transform: rotate ? "rotateY(0.5turn)" : "",
   ".face": {
@@ -31,6 +31,9 @@ const FlipBox = styled(Box)(({ rotate }) => ({
   ".back-side": {
     transform: "rotateY(0.5turn)",
   },
+  "&:hover": {
+    boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px;",
+  },
 }));
 
 const TryProductItem = styled(Box)(() => ({
@@ -44,13 +47,13 @@ const TryProductItem = styled(Box)(() => ({
   borderRadius: "10px",
 
   ".MuiTypography-root": {
-    color: "#FD6262",
+    color: "#ea6060",
     fontSize: "58px",
     fontWeight: 700,
     marginTop: "12px",
   },
   svg: {
-    color: "#FD6262",
+    color: "#ea6060",
     ":hover": {
       color: "#fc1616",
     },
@@ -77,7 +80,7 @@ const TryProduct = () => {
       >
         <Typography
           sx={{
-            color: "#FD6262",
+            color: "#ea6060",
             fontSize: { xs: "35px", md: "58px" },
             fontWeight: 700,
             marginTop: "12px",

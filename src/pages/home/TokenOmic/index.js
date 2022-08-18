@@ -22,7 +22,7 @@ const TokenOmic = () => {
       >
         <Typography
           sx={{
-            color: "#FD6262",
+            color: "#ea6060",
             fontSize: { xs: "35px", md: "58px" },
             fontWeight: 700,
             marginTop: "12px",

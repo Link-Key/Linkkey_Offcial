@@ -25,7 +25,7 @@ const Preface = () => {
           sx={{
             fontWeight: 900,
             fontSize: { xs: "40px", sm: "70px", md: "91px" },
-            color: "#FD6262",
+            color: "#ea6060",
             span: {
               color: "#333",
             },
@@ -48,7 +48,7 @@ const Preface = () => {
               typeSpeed={40}
               backSpeed={50}
               loop
-              style={{ color: "#FD6262" }}
+              style={{ color: "#ea6060" }}
             />
           </Typography>
         </LightSpeed>
@@ -80,8 +80,8 @@ const Preface = () => {
             sx={{
               width: "270px",
               background: "white",
-              color: "#FD6262",
-              border: "2px solid #FD6262",
+              color: "#ea6060",
+              border: "2px solid #ea6060",
               borderRadius: "10px",
               fontSize: { xs: "15px", md: "20px" },
               "&:hover": {
@@ -95,12 +95,12 @@ const Preface = () => {
           <Button
             sx={{
               width: "270px",
-              background: "#FD6262",
+              background: "#ea6060",
               color: "white",
               borderRadius: "10px",
               fontSize: { xs: "15px", md: "20px" },
               "&:hover": {
-                background: "#FD6262cc",
+                background: "#ea6060cc",
               },
             }}
             onClick={() => {

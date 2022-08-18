@@ -21,6 +21,8 @@ const CardWrapper = styled(Card)(() => ({
   background: "white",
   border: "1px solid rgba(187, 187, 187, 100)",
   boxShadow: "none",
+
+  transition: "all .5s",
   img: {
     borderRadius: "10px",
   },
@@ -32,7 +34,7 @@ const CardWrapper = styled(Card)(() => ({
     paddingBottom: "0px",
     ".MuiTypography-body1": {
       width: "312px",
-      color: "#FD6262",
+      color: "#ea6060",
       fontSize: "58px",
       fontWeight: "600",
     },
@@ -43,7 +45,7 @@ const CardWrapper = styled(Card)(() => ({
       fontWeight: "500",
     },
     svg: {
-      color: "#FD6262",
+      color: "#ea6060",
       ":hover": {
         color: "#fc1616",
       },
@@ -53,6 +55,9 @@ const CardWrapper = styled(Card)(() => ({
       right: "45px",
       bottom: "20px",
     },
+  },
+  "&:hover": {
+    boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px;",
   },
 }));
 
@@ -73,7 +78,7 @@ const DAO = () => {
       >
         <Typography
           sx={{
-            color: "#FD6262",
+            color: "#ea6060",
             fontSize: { xs: "35px", md: "58px" },
             fontWeight: 700,
             marginTop: "12px",
