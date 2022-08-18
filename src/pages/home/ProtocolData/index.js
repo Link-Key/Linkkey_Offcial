@@ -1,7 +1,6 @@
 import { Box, Container, styled, Typography, Button } from "@mui/material";
 import { useCallback, useEffect } from "react";
 import { useState } from "react";
-import { useRef } from "react";
 import CountUp from "react-countup";
 import Flip from "react-reveal/Flip";
 
