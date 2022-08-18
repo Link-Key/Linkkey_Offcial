@@ -24,7 +24,8 @@ const CooperatorBoxItem = styled(Box)(() => ({
   justifyContent: "center",
   alignItems: "center",
   gap: "5px",
-
+  transition: "all .5s",
+  cursor: "pointer",
   img: {
     width: "40px",
     // filter: "grayscale(1)",
@@ -33,6 +34,10 @@ const CooperatorBoxItem = styled(Box)(() => ({
     width: "40px",
     height: "40px",
     // filter: "grayscale(1)",
+  },
+
+  "&:hover": {
+    boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px;",
   },
 }));
 
