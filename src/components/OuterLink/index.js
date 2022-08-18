@@ -17,7 +17,7 @@ const LinkBtn = styled(Link)(() => ({
   },
   "&:hover": {
     svg: {
-      color: "#FB6D05",
+      color: "#ea6060",
     },
   },
 }));
