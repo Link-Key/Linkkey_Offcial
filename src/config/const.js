@@ -1,7 +1,7 @@
 export const linkList = {
   docs: "https://docs.linkkey.tech",
   blog: "https://mirror.xyz/linkkeyio.eth",
-  whitePaper: "https://linkkey.io/document/whitepaper",
+  whitePaper: "https://linkkey.io/document/whitepaper.pdf",
   sns: "https://sns.chat/",
   linkChat: "#",
   roadMap: "https://roadmap.linkkey.tech/",
