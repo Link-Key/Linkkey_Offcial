@@ -18,11 +18,9 @@ const Home = () => {
 
   return (
     <Box
-      sx={
-        {
-          // width: "100vw",
-        }
-      }
+      sx={{
+        width: "100%",
+      }}
     >
       <Header />
       <Preface />

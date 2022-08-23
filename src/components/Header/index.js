@@ -27,7 +27,7 @@ const HeaderWrapper = styled(Box)(() => ({
     display: "flex",
     alignItems: "center",
     ":hover": {
-      color: "#FD6262",
+      color: "#ea6060",
     },
   },
 }));
@@ -127,7 +127,7 @@ const Header = () => {
           <DehazeIcon
             sx={{
               fontSize: 35,
-              color: "#FD6262",
+              color: "#ea6060",
             }}
           />
         </IconButton>

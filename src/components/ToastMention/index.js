@@ -34,7 +34,7 @@ const ToastMention = (props) => {
       borderRadius: "12px",
       padding: "0 16px",
       wordBreak: "break-word",
-      color: "#FD6262",
+      color: "#ea6060",
       fontWeight: 500,
       top: "10vh",
     },

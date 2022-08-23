@@ -18,7 +18,7 @@ const FooterItem = styled(Box)(() => ({
     fontSize: "14px",
     fontWeight: 400,
     ":hover": {
-      color: "#fd6262",
+      color: "#ea6060",
     },
   },
 }));

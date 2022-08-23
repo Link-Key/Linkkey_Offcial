@@ -9,11 +9,11 @@ import {
 } from "@mui/material";
 import { useState } from "react";
 import { ReactComponent as ArrowRight } from "../../../assets/icon/arrowRight.svg";
-import Zoom from "react-reveal/Zoom";
+import Fade from "react-reveal/Fade";
 
 const FlipBox = styled(Box)(({ rotate }) => ({
   position: "relative",
-  width: "485px",
+  // width: "485px",
   height: "565px",
   cursor: "pointer",
   transition: "1s ease-in-out",
@@ -37,20 +37,21 @@ const TryProductItem = styled(Box)(() => ({
   position: "relative",
   display: "flex",
   alignItems: "center",
-  width: "485px",
+  maxWidth: "485px",
   height: "565px",
   border: "1px solid rgba(187, 187, 187, 100)",
   padding: "0 45px",
   borderRadius: "10px",
+  transition: "all .5s",
 
   ".MuiTypography-root": {
-    color: "#FD6262",
+    color: "#ea6060",
     fontSize: "58px",
     fontWeight: 700,
     marginTop: "12px",
   },
   svg: {
-    color: "#FD6262",
+    color: "#ea6060",
     ":hover": {
       color: "#fc1616",
     },
@@ -59,6 +60,10 @@ const TryProductItem = styled(Box)(() => ({
     position: "absolute",
     right: "45px",
     bottom: "20px",
+  },
+
+  "&:hover": {
+    boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px;",
   },
 }));
 
@@ -77,7 +82,7 @@ const TryProduct = () => {
       >
         <Typography
           sx={{
-            color: "#FD6262",
+            color: "#ea6060",
             fontSize: { xs: "35px", md: "58px" },
             fontWeight: 700,
             marginTop: "12px",
@@ -121,8 +126,13 @@ const TryProduct = () => {
           perspective: "8000px",
         }}
       >
-        <Zoom left>
-          <FlipBox rotate={isSNSRotate}>
+        <Fade left big>
+          <FlipBox
+            rotate={isSNSRotate}
+            sx={{
+              width: { xs: "350px", md: "485px" },
+            }}
+          >
             <TryProductItem className="face front-side">
               <Typography>SNS</Typography>
               <Link
@@ -164,9 +174,14 @@ const TryProduct = () => {
               </List>
             </TryProductItem>
           </FlipBox>
-        </Zoom>
-        <Zoom right>
-          <FlipBox rotate={isChatRotate}>
+        </Fade>
+        <Fade right big>
+          <FlipBox
+            rotate={isChatRotate}
+            sx={{
+              width: { xs: "350px", md: "485px" },
+            }}
+          >
             <TryProductItem className="face front-side">
               <Typography>CHAT</Typography>
               <Link
@@ -213,7 +228,7 @@ const TryProduct = () => {
               </List>
             </TryProductItem>
           </FlipBox>
-        </Zoom>
+        </Fade>
       </Box>
     </Container>
   );

@@ -11,7 +11,7 @@ const darkTheme = responsiveFontSizes(
     palette: {
       mode: "dark",
       primary: {
-        main: "#FD6262",
+        main: "#ea6060",
         contrastText: "white",
       },
     },
@@ -22,11 +22,11 @@ const darkTheme = responsiveFontSizes(
             fontSize: "18px",
             fontWeight: 400,
             color: "white",
-            background: "#FD6262",
+            background: "#ea6060",
             borderRadius: "10px",
             textTransform: "none",
             "&:hover": {
-              background: "#FD6262cc",
+              background: "#ea6060cc",
             },
           },
         },
