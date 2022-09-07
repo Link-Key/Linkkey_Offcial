@@ -31,7 +31,7 @@ const Preface = () => {
             },
           }}
         >
-          <span>BUILD</span> CIRCLE SOCIAL <span>ON</span> WEB3
+          <span>BUILD</span> SOCIAL CIRCLE <span>ON</span> WEB3
         </Box>
         <LightSpeed right>
           <Typography
@@ -65,7 +65,7 @@ const Preface = () => {
           circles, LINKNFT contract to define the relationship between friends
           and groups, LINKCHAT to achieve encrypted communication between
           friends & groups, LINKPOST to build social interaction between friends
-          in circles
+          in circles.
         </Typography>
         <Box
           sx={{
