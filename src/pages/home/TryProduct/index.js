@@ -39,7 +39,7 @@ const TryProductItem = styled(Box)(() => ({
   alignItems: "center",
   maxWidth: "485px",
   height: "565px",
-  border: "1px solid rgba(187, 187, 187, 100)",
+  border: "1px solid rgba(238, 128, 128, 0.8)",
   padding: "0 45px",
   borderRadius: "10px",
   transition: "all .5s",
@@ -63,7 +63,7 @@ const TryProductItem = styled(Box)(() => ({
   },
 
   "&:hover": {
-    boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px;",
+    boxShadow: "rgba(238, 128, 128, 0.6) 0px 5px 15px;",
   },
 }));
 
@@ -88,7 +88,7 @@ const TryProduct = () => {
             marginTop: "12px",
           }}
         >
-          TRY PRODUCT
+          PRODUCTS
         </Typography>
 
         <Typography
@@ -111,9 +111,9 @@ const TryProduct = () => {
             marginTop: "5px",
           }}
         >
-          We will continue to build a series of web3 products to gradually
+          We will continue to build a series of Web3 products to gradually
           improve Linkkey's circle-based WEB3 social scene and provide valuable
-          services for WEB3 citizens
+          services for Web3 citizens
         </Typography>
       </Box>
       <Box

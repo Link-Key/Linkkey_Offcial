@@ -6,7 +6,7 @@ import Flip from "react-reveal/Flip";
 
 const DateItemBox = styled(Box)(() => ({
   minWidth: "300px",
-  border: "1px solid rgba(187, 187, 187, 100)",
+  border: "1px solid rgba(238, 128, 128, 0.8)",
   borderRadius: "10px",
   padding: "50px 30px",
   textAlign: "center",
@@ -22,7 +22,7 @@ const DateItemBox = styled(Box)(() => ({
     marginTop: "13px",
   },
   "&:hover": {
-    boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px;",
+    boxShadow: "rgba(238, 128, 128, 0.6) 0px 5px 15px;",
   },
 }));
 
