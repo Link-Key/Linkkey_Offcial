@@ -15,7 +15,7 @@ import { linkList } from "../../../config/const";
 import Fade from "react-reveal/Fade";
 
 const CardWrapper = styled(Card)(() => ({
-  maxWidth: "485px",
+  // maxWidth: "485px",
   padding: "22px",
   borderRadius: "10px",
   background: "white",
@@ -135,11 +135,15 @@ const DAO = () => {
         }}
       >
         <Fade left big>
-          <CardWrapper>
+          <CardWrapper
+            sx={{
+              width: { xs: "92vw", md: "485px" },
+            }}
+          >
             <CardMedia
               component="img"
               sx={{
-                maxWidth: "443px",
+                maxWidth: "100%",
               }}
               image={DAOImg2}
             />
@@ -153,11 +157,15 @@ const DAO = () => {
           </CardWrapper>
         </Fade>
         <Fade right big>
-          <CardWrapper>
+          <CardWrapper
+            sx={{
+              width: { xs: "92vw", md: "485px" },
+            }}
+          >
             <CardMedia
               component="img"
               sx={{
-                maxWidth: "443px",
+                maxWidth: "100%",
               }}
               image={DAOImg1}
             />
