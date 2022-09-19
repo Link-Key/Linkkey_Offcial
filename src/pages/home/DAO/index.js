@@ -19,7 +19,7 @@ const CardWrapper = styled(Card)(() => ({
   padding: "22px",
   borderRadius: "10px",
   background: "white",
-  border: "1px solid rgba(187, 187, 187, 100)",
+  border: "1px solid rgba(238, 128, 128, 0.8)",
   boxShadow: "none",
 
   transition: "all .5s",
@@ -57,7 +57,7 @@ const CardWrapper = styled(Card)(() => ({
     },
   },
   "&:hover": {
-    boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px;",
+    boxShadow: "rgba(238, 128, 128, 0.6) 0px 5px 15px;",
   },
 }));
 

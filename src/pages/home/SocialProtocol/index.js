@@ -54,8 +54,7 @@ const SocialProtocol = () => {
             marginTop: "5px",
           }}
         >
-          We focus on small circle WEB3 social, we don't store user data, we are
-          passionate about building open source & on-chain applications
+          We focus on small Web3 social circles, we don't store user data, we are passionate about building open source and on-chain applications
         </Typography>
       </Box>
       <Fade left big>
