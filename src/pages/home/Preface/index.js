@@ -103,9 +103,7 @@ const Preface = () => {
                 background: "#ea6060cc",
               },
             }}
-            onClick={() => {
-              ToastMention({ message: "Coming soon!" });
-            }}
+            href={linkList.app}
           >
             JOIN LINKKEY CHAT
           </Button>
