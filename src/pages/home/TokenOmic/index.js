@@ -1,8 +1,12 @@
 import { Box, Container, Typography } from "@mui/material";
 import { Fade } from "react-reveal";
 import TokenOmicImg from "../../../assets/images/TokenOmic.png";
+import TokenOmicMobile from "../../../assets/images/TokenOmicMobile.png";
+import { useScreen } from "../../../provider/screen";
 
 const TokenOmic = () => {
+  const screen = useScreen();
+  console.log("screen:", screen);
   return (
     <Container
       maxWidth="lg"
@@ -57,7 +61,17 @@ const TokenOmic = () => {
         </Typography>
       </Box>
       <Fade bottom big>
-        <img src={TokenOmicImg} alt="TokenOmic" />
+        {screen.isMd ? (
+          <img src={TokenOmicImg} alt="TokenOmic" />
+        ) : (
+          <img
+            src={TokenOmicMobile}
+            style={{
+              margin: "20px auto 100px",
+            }}
+            alt="TokenOmic"
+          />
+        )}
       </Fade>
     </Container>
   );

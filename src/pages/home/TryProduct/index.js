@@ -14,7 +14,7 @@ import Fade from "react-reveal/Fade";
 const FlipBox = styled(Box)(({ rotate }) => ({
   position: "relative",
   // width: "485px",
-  height: "565px",
+  minHeight: "500px",
   cursor: "pointer",
   transition: "1s ease-in-out",
   transformStyle: "preserve-3d",
@@ -37,9 +37,9 @@ const TryProductItem = styled(Box)(() => ({
   position: "relative",
   display: "flex",
   alignItems: "center",
-  maxWidth: "485px",
-  height: "565px",
-  border: "1px solid rgba(238, 128, 128, 0.8)",
+  // maxWidth: "485px",
+  minHeight: "500px",
+  border: "1px solid rgba(187, 187, 187, 100)",
   padding: "0 45px",
   borderRadius: "10px",
   transition: "all .5s",
@@ -130,7 +130,7 @@ const TryProduct = () => {
           <FlipBox
             rotate={isSNSRotate}
             sx={{
-              width: { xs: "350px", md: "485px" },
+              width: { xs: "92vw", md: "485px" },
             }}
           >
             <TryProductItem className="face front-side">
@@ -179,7 +179,8 @@ const TryProduct = () => {
           <FlipBox
             rotate={isChatRotate}
             sx={{
-              width: { xs: "350px", md: "485px" },
+              // width: "92vw",
+              width: { xs: "92vw", md: "485px" },
             }}
           >
             <TryProductItem className="face front-side">
