@@ -93,12 +93,17 @@ const Header = () => {
           <Link href={linkList.sns} target="_blank" underline="none">
             SNS
           </Link>
+          {/*<Link*/}
+          {/*  target="_blank"*/}
+          {/*  underline="none"*/}
+          {/*  onClick={() => {*/}
+          {/*    ToastMention({ message: "Coming soon!" });*/}
+          {/*  }}*/}
+          {/*>*/}
           <Link
             target="_blank"
             underline="none"
-            onClick={() => {
-              ToastMention({ message: "Coming soon!" });
-            }}
+            href={linkList.app}
           >
             LinkChat
           </Link>
@@ -196,9 +201,7 @@ const Header = () => {
           <Link
             target="_blank"
             underline="none"
-            onClick={() => {
-              ToastMention({ message: "Coming soon!" });
-            }}
+            href={linkList.app}
           >
             <ListItem>LinkChat</ListItem>
           </Link>

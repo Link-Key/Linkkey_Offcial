@@ -11,4 +11,5 @@ export const linkList = {
   discord: "https://discord.com/invite/UMNRQryyts",
   dao: "https://client.aragon.org/#/linkkey.aragonid.eth",
   teamDao: "https://client.aragon.org/#/linkkeyteam.aragonid.eth",
+  app: "https://app.linkkey.io"
 };
