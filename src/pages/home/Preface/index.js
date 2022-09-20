@@ -13,7 +13,7 @@ import LightSpeed from "react-reveal/LightSpeed";
 import ReactTyped from "react-typed";
 import SnsRelation from "../../../assets/images/snsRelation.png";
 import PolygonCircle from "../../../assets/images/polygonCircle.png";
-import ToastMention from "../../../components/ToastMention";
+
 import { linkList } from "../../../config/const";
 
 const Preface = () => {
@@ -117,9 +117,7 @@ const Preface = () => {
                   background: "#ea6060cc",
                 },
               }}
-              onClick={() => {
-                ToastMention({ message: "Coming soon!" });
-              }}
+              href={linkList.app}
             >
               JOIN LINKKEY CHAT
             </Button>
