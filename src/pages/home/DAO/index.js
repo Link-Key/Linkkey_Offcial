@@ -37,7 +37,6 @@ const CardWrapper = styled(Card)(() => ({
     ".MuiTypography-body1": {
       width: "312px",
       color: "#ea6060",
-      fontSize: "58px",
       fontWeight: "600",
     },
     ".MuiTypography-body2": {
@@ -119,7 +118,7 @@ const DAO = () => {
             fontSize: { xs: "15px", md: "20px" },
             textAlign: "center",
             marginTop: "5px",
-            marginBottom: "50px"
+            marginBottom: "50px",
           }}
         >
           50% of the funds will be allocated to LinkkeyTeam DAO for the
@@ -137,7 +136,7 @@ const DAO = () => {
           flexWrap: { xs: "wrap", sm: "wrap", md: "row" },
         }}
       >
-        <Fade left big>
+        <Fade left big duration={700}>
           <CardWrapper
             sx={{
               width: { xs: "92vw", md: "485px" },
@@ -151,7 +150,13 @@ const DAO = () => {
               image={DAOImg2}
             />
             <CardContent>
-              <Typography>LINKKEY DAO</Typography>
+              <Typography
+                sx={{
+                  fontSize: { sm: "50px", md: "58px", lg: "58px", xl: "58px" },
+                }}
+              >
+                LINKKEY DAO
+              </Typography>
               <Typography variant="body2">By Aragon</Typography>
               <Link href={linkList.dao} target="_target">
                 <ArrowRight />
@@ -159,7 +164,7 @@ const DAO = () => {
             </CardContent>
           </CardWrapper>
         </Fade>
-        <Fade right big>
+        <Fade right big duration={700}>
           <CardWrapper
             sx={{
               width: { xs: "92vw", md: "485px" },
@@ -173,7 +178,13 @@ const DAO = () => {
               image={DAOImg1}
             />
             <CardContent>
-              <Typography>LINKKEY TEAM DAO</Typography>
+              <Typography
+                sx={{
+                  fontSize: { sm: "50px", md: "58px", lg: "58px", xl: "58px" },
+                }}
+              >
+                LINKKEY TEAM DAO
+              </Typography>
               <Typography variant="body2">By Aragon</Typography>
               <Link href={linkList.teamDao} target="_target">
                 <ArrowRight />

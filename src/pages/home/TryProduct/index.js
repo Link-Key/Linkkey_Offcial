@@ -16,7 +16,7 @@ const FlipBox = styled(Box)(({ rotate }) => ({
   // width: "485px",
   minHeight: "500px",
   cursor: "pointer",
-  transition: "1s ease-in-out",
+  transition: ".7s ease-in-out",
   transformStyle: "preserve-3d",
   transform: rotate ? "rotateY(0.5turn)" : "",
   ".face": {
@@ -26,7 +26,7 @@ const FlipBox = styled(Box)(({ rotate }) => ({
     width: "100%",
     height: "100%",
     backfaceVisibility: "hidden",
-    transition: "1s ease-in-out",
+    transition: ".7s ease-in-out",
   },
   ".back-side": {
     transform: "rotateY(0.5turn)",
@@ -109,7 +109,7 @@ const TryProduct = () => {
             fontSize: { xs: "15px", md: "20px" },
             textAlign: "center",
             marginTop: "10px",
-            marginBottom: "50px"
+            marginBottom: "50px",
           }}
         >
           We will continue to build a series of Web3 products to gradually
@@ -127,7 +127,7 @@ const TryProduct = () => {
           perspective: "8000px",
         }}
       >
-        <Fade left big>
+        <Fade left big duration={700}>
           <FlipBox
             rotate={isSNSRotate}
             sx={{
@@ -176,7 +176,7 @@ const TryProduct = () => {
             </TryProductItem>
           </FlipBox>
         </Fade>
-        <Fade right big>
+        <Fade right big duration={700}>
           <FlipBox
             rotate={isChatRotate}
             sx={{
