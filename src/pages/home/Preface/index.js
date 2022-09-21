@@ -1,11 +1,19 @@
-import { Container, Box, Typography, Button } from "@mui/material";
+import {
+  Container,
+  Box,
+  Typography,
+  Button,
+  Stack,
+  IconButton,
+} from "@mui/material";
 import { memo } from "react";
 import { Fade } from "react-reveal";
 import LightSpeed from "react-reveal/LightSpeed";
 
 import ReactTyped from "react-typed";
 import SnsRelation from "../../../assets/images/snsRelation.png";
-import ToastMention from "../../../components/ToastMention";
+import PolygonCircle from "../../../assets/images/polygonCircle.png";
+
 import { linkList } from "../../../config/const";
 
 const Preface = () => {
@@ -92,21 +100,34 @@ const Preface = () => {
           >
             REGISTY SNS DOMAIN
           </Button>
-          <Button
-            sx={{
-              width: "270px",
-              background: "#ea6060",
-              color: "white",
-              borderRadius: "10px",
-              fontSize: { xs: "15px", md: "20px" },
-              "&:hover": {
-                background: "#ea6060cc",
-              },
-            }}
-            href={linkList.app}
+          <Stack
+            direction="row"
+            spacing={2}
+            alignItems="center"
+            justifyContent="center"
           >
-            JOIN LINKKEY CHAT
-          </Button>
+            <Button
+              sx={{
+                width: "270px",
+                background: "#ea6060",
+                color: "white",
+                borderRadius: "10px",
+                fontSize: { xs: "15px", md: "20px" },
+                "&:hover": {
+                  background: "#ea6060cc",
+                },
+              }}
+              href={linkList.app}
+            >
+              JOIN LINKKEY CHAT
+            </Button>
+            <IconButton
+              sx={{ img: { width: "35px" } }}
+              href="https://twitter.com/Polygon_Space1/status/1472628456471302144"
+            >
+              <img src={PolygonCircle} alt="polygon" />
+            </IconButton>
+          </Stack>
         </Box>
       </Box>
       <Fade left big>
