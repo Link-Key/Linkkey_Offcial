@@ -1,7 +1,8 @@
 import { Box, Container, Typography } from "@mui/material";
 import { memo } from "react";
 import { Fade } from "react-reveal";
-import SocialProtocolImg from "../../../assets/images/socialProtocol.png";
+// import SocialProtocolImg from "../../../assets/images/socialProtocol.png";
+import SocialProtocolImg from "../../../assets/images/linkkey-relation.png";
 
 const SocialProtocol = () => {
   return (
@@ -51,7 +52,8 @@ const SocialProtocol = () => {
             color: "#9A9A9A",
             fontSize: { xs: "15px", md: "20px" },
             textAlign: "center",
-            marginTop: "5px",
+            marginTop: "10px",
+            marginBottom: "50px"
           }}
         >
           We focus on small Web3 social circles, we don't store user data, we are passionate about building open source and on-chain applications

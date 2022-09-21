@@ -84,7 +84,7 @@ const Cooperator = () => {
             color: "#9A9A9A",
             fontSize: { xs: "15px", md: "20px" },
             textAlign: "center",
-            marginTop: "5px",
+            marginTop: "10px",
           }}
         >
           We are constantly experimenting with new technology solutions, with a
@@ -97,7 +97,7 @@ const Cooperator = () => {
           justifyContent: "center",
           gap: "30px",
           flexWrap: "wrap",
-          marginTop: "180px",
+          marginTop: "130px",
         }}
       >
         <CooperatorBoxItem>

@@ -11,8 +11,10 @@ import { Fade } from "react-reveal";
 import LightSpeed from "react-reveal/LightSpeed";
 
 import ReactTyped from "react-typed";
-import SnsRelation from "../../../assets/images/snsRelation.png";
-import PolygonCircle from "../../../assets/images/polygonCircle.png";
+// import SnsRelation from "../../../assets/images/snsRelation.png";
+import SnsRelation from "../../../assets/images/linkkey-graph.png";
+// import PolygonCircle from "../../../assets/images/polygonCircle.png";
+import PolygonCircle from "../../../assets/images/polygon-grant.png";
 
 import { linkList } from "../../../config/const";
 
@@ -87,6 +89,7 @@ const Preface = () => {
           <Button
             sx={{
               width: "270px",
+              height: "50px",
               background: "white",
               color: "#ea6060",
               border: "2px solid #ea6060",
@@ -109,6 +112,7 @@ const Preface = () => {
             <Button
               sx={{
                 width: "270px",
+                height: "50px",
                 background: "#ea6060",
                 color: "white",
                 borderRadius: "10px",
@@ -122,7 +126,7 @@ const Preface = () => {
               JOIN LINKKEY CHAT
             </Button>
             <IconButton
-              sx={{ img: { width: "35px" } }}
+              sx={{ img: { width: "100px" } }}
               href="https://twitter.com/Polygon_Space1/status/1472628456471302144"
             >
               <img src={PolygonCircle} alt="polygon" />
@@ -135,7 +139,7 @@ const Preface = () => {
           sx={{
             textAlign: "center",
             img: {
-              maxWidth: "70%",
+              maxWidth: "95%",
               marginBottom: "100px",
             },
           }}

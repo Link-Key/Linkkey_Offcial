@@ -108,7 +108,8 @@ const TryProduct = () => {
             color: "#9A9A9A",
             fontSize: { xs: "15px", md: "20px" },
             textAlign: "center",
-            marginTop: "5px",
+            marginTop: "10px",
+            marginBottom: "50px"
           }}
         >
           We will continue to build a series of Web3 products to gradually

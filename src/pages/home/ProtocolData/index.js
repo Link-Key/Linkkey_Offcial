@@ -92,7 +92,8 @@ const ProtocolData = () => {
             color: "#9A9A9A",
             fontSize: { xs: "15px", md: "20px" },
             textAlign: "center",
-            marginTop: "5px",
+            marginTop: "10px",
+            marginBottom: "50px"
           }}
         >
           WEB3 circle social data is on the rise, more people joining is growing

@@ -9,8 +9,10 @@ import {
   CardContent,
 } from "@mui/material";
 import { ReactComponent as ArrowRight } from "../../../assets/icon/arrowRight.svg";
-import DAOImg1 from "../../../assets/images/dao.png";
-import DAOImg2 from "../../../assets/images/dao1.png";
+// import DAOImg1 from "../../../assets/images/dao.png";
+import DAOImg1 from "../../../assets/images/linkkey-team-dao-ratio.png";
+// import DAOImg2 from "../../../assets/images/dao1.png";
+import DAOImg2 from "../../../assets/images/linkkey-dao-ratio.png";
 import { linkList } from "../../../config/const";
 import Fade from "react-reveal/Fade";
 
@@ -104,7 +106,7 @@ const DAO = () => {
             color: "#9A9A9A",
             fontSize: { xs: "15px", md: "20px" },
             textAlign: "center",
-            marginTop: "5px",
+            marginTop: "10px",
           }}
         >
           We don't have a physical office, and all asset income is pooled into
@@ -117,6 +119,7 @@ const DAO = () => {
             fontSize: { xs: "15px", md: "20px" },
             textAlign: "center",
             marginTop: "5px",
+            marginBottom: "50px"
           }}
         >
           50% of the funds will be allocated to LinkkeyTeam DAO for the

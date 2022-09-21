@@ -1,7 +1,9 @@
 import { Box, Container, Typography } from "@mui/material";
 import { Fade } from "react-reveal";
-import TokenOmicImg from "../../../assets/images/TokenOmic.png";
-import TokenOmicMobile from "../../../assets/images/TokenOmicMobile.png";
+// import TokenOmicImg from "../../../assets/images/TokenOmic.png";
+import TokenOmicImg from "../../../assets/images/register-process-for-pc.png";
+// import TokenOmicMobile from "../../../assets/images/TokenOmicMobile.png";
+import TokenOmicMobile from "../../../assets/images/register-process-for-mobile.png";
 import { useScreen } from "../../../provider/screen";
 
 const TokenOmic = () => {
@@ -52,7 +54,8 @@ const TokenOmic = () => {
             color: "#9A9A9A",
             fontSize: { xs: "15px", md: "20px" },
             textAlign: "center",
-            marginTop: "5px",
+            marginTop: "10px",
+            marginBottom: "50px"
           }}
         >
           150 KEY will be issued for every 1 domain registered, and will last
@@ -62,7 +65,13 @@ const TokenOmic = () => {
       </Box>
       <Fade bottom big>
         {screen.isMd ? (
-          <img src={TokenOmicImg} alt="TokenOmic" />
+          <img
+            src={TokenOmicImg}
+            alt="TokenOmic"
+            style={{
+              margin: "50px"
+            }}
+          />
         ) : (
           <img
             src={TokenOmicMobile}

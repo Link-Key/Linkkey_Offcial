@@ -107,6 +107,7 @@ const Footer = () => {
               height: "50px",
               border: "1px solid grey",
               borderRadius: "50px",
+              borderColor: "#ea6060"
             },
           }}
         >
