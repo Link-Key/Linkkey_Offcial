@@ -123,7 +123,7 @@ const Preface = () => {
               }}
               href={linkList.app}
             >
-              JOIN LINKKEY CHAT
+              LAUNCH LINKKEY APP
             </Button>
             <IconButton
               sx={{ img: { width: "100px" } }}

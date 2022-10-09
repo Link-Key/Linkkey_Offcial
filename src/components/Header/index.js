@@ -105,7 +105,7 @@ const Header = () => {
             underline="none"
             href={linkList.app}
           >
-            LinkChat
+            App
           </Link>
           <Link href={linkList.roadMap} target="_blank" underline="none">
             RoadMap
@@ -203,7 +203,7 @@ const Header = () => {
             underline="none"
             href={linkList.app}
           >
-            <ListItem>LinkChat</ListItem>
+            <ListItem>App</ListItem>
           </Link>
           <Link href={linkList.roadMap} target="_blank" underline="none">
             <ListItem>RoadMap</ListItem>
