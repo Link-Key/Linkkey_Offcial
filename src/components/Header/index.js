@@ -103,9 +103,9 @@ const Header = () => {
           <Link
             target="_blank"
             underline="none"
-            href={linkList.app}
+            href={linkList.invest}
           >
-            App
+            InvestUs
           </Link>
           <Link href={linkList.roadMap} target="_blank" underline="none">
             RoadMap
@@ -201,9 +201,9 @@ const Header = () => {
           <Link
             target="_blank"
             underline="none"
-            href={linkList.app}
+            href={linkList.invest}
           >
-            <ListItem>App</ListItem>
+            <ListItem>InvestUs</ListItem>
           </Link>
           <Link href={linkList.roadMap} target="_blank" underline="none">
             <ListItem>RoadMap</ListItem>
