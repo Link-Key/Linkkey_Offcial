@@ -140,6 +140,7 @@ const Preface = () => {
             textAlign: "center",
             img: {
               maxWidth: "95%",
+              marginTop: "100px",
               marginBottom: "100px",
             },
           }}
