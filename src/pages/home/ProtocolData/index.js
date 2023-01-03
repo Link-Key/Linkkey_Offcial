@@ -93,7 +93,7 @@ const ProtocolData = () => {
             fontSize: { xs: "15px", md: "20px" },
             textAlign: "center",
             marginTop: "10px",
-            marginBottom: "50px"
+            marginBottom: "50px",
           }}
         >
           WEB3 circle social data is on the rise, more people joining is growing
@@ -117,7 +117,7 @@ const ProtocolData = () => {
           <DateItemBox>
             <CountUp
               start={0}
-              end={3385800}
+              end={3394650}
               separator=","
               duration={2}
               enableScrollSpy={true}
@@ -140,7 +140,7 @@ const ProtocolData = () => {
           <DateItemBox>
             <CountUp
               start={0}
-              end={12021}
+              end={12224}
               separator=","
               enableScrollSpy={true}
               delay={0}
@@ -156,7 +156,7 @@ const ProtocolData = () => {
           <DateItemBox>
             <CountUp
               start={0}
-              end={22588}
+              end={22631}
               separator=","
               enableScrollSpy={true}
               delay={0}
