@@ -1,5 +1,5 @@
 import { Container, Divider, Box, styled } from "@mui/material";
-// import { ReactComponent as Logo } from "../../assets/icon/logo.svg";
+import moment from "moment/moment";
 import Logo from "../../assets/images/logo.png";
 import OuterLink from "../OuterLink";
 
@@ -107,7 +107,7 @@ const Footer = () => {
               height: "50px",
               border: "1px solid grey",
               borderRadius: "50px",
-              borderColor: "#ea6060"
+              borderColor: "#ea6060",
             },
           }}
         >
@@ -120,7 +120,7 @@ const Footer = () => {
           paddingBottom: "22px",
         }}
       >
-        © 2021-2022 by Linkkey DAO
+        {`© 2021-${moment().format("YYYY")} by Linkkey DAO`}
       </Box>
     </Container>
   );
