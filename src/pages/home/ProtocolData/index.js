@@ -117,7 +117,7 @@ const ProtocolData = () => {
           <DateItemBox>
             <CountUp
               start={0}
-              end={3394650}
+              end={3473700}
               separator=","
               duration={2}
               enableScrollSpy={true}
@@ -140,7 +140,7 @@ const ProtocolData = () => {
           <DateItemBox>
             <CountUp
               start={0}
-              end={12224}
+              end={12267}
               separator=","
               enableScrollSpy={true}
               delay={0}
@@ -156,7 +156,7 @@ const ProtocolData = () => {
           <DateItemBox>
             <CountUp
               start={0}
-              end={22631}
+              end={23158}
               separator=","
               enableScrollSpy={true}
               delay={0}
