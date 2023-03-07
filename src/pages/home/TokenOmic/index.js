@@ -34,7 +34,7 @@ const TokenOmic = () => {
             marginTop: "12px",
           }}
         >
-          TOKENOMIC
+          TOKENOMICS
         </Typography>
 
         <Typography
@@ -46,7 +46,7 @@ const TokenOmic = () => {
             marginTop: "22px",
           }}
         >
-          Community-driven tokenomic
+          Community-driven tokenomics
         </Typography>
         <Typography
           variant="body2"
