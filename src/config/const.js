@@ -1,10 +1,10 @@
 export const linkList = {
-  docs: "https://docs.linkkey.tech",
+  docs: "https://docs.linkkey.io",
   blog: "https://mirror.xyz/linkkeyio.eth",
   whitePaper: "https://linkkey.gitbook.io/linkkey/",
   sns: "https://sns.chat/",
   linkChat: "#",
-  roadMap: "https://roadmap.linkkey.tech/",
+  roadMap: "https://roadmap.linkkey.io/",
   github: "https://github.com/Link-Key",
   twitter: "https://twitter.com/LinkkeyOfficial",
   telegram: "https://t.me/linkkeydao",
