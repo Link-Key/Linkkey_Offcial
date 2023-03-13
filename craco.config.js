@@ -12,4 +12,15 @@ module.exports = {
       },
     },
   },
+  devServer: {
+    proxy: {
+      "/api": {
+        target: "https://sns.chat",
+        changeOrigin: true,
+        pathRewrite: {
+          "^/api": "/api",
+        },
+      },
+    },
+  },
 };

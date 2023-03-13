@@ -13,7 +13,6 @@ import {
 import { useState } from "react";
 import { ReactComponent as Logo } from "../../assets/icon/logo.svg";
 import { linkList } from "../../config/const";
-import ToastMention from "../ToastMention";
 import DehazeIcon from "@mui/icons-material/Dehaze";
 
 const HeaderWrapper = styled(Box)(() => ({
@@ -100,11 +99,7 @@ const Header = () => {
           {/*    ToastMention({ message: "Coming soon!" });*/}
           {/*  }}*/}
           {/*>*/}
-          <Link
-            target="_blank"
-            underline="none"
-            href={linkList.invest}
-          >
+          <Link target="_blank" underline="none" href={linkList.invest}>
             InvestUs
           </Link>
           <Link href={linkList.roadMap} target="_blank" underline="none">
@@ -198,11 +193,7 @@ const Header = () => {
           <Link href={linkList.sns} target="_blank" underline="none">
             <ListItem>SNS</ListItem>
           </Link>
-          <Link
-            target="_blank"
-            underline="none"
-            href={linkList.invest}
-          >
+          <Link target="_blank" underline="none" href={linkList.invest}>
             <ListItem>InvestUs</ListItem>
           </Link>
           <Link href={linkList.roadMap} target="_blank" underline="none">

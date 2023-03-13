@@ -3,6 +3,7 @@ import { useCallback, useEffect } from "react";
 import { useState } from "react";
 import CountUp from "react-countup";
 import Flip from "react-reveal/Flip";
+import { get } from "../../../utils/axios";
 
 const DateItemBox = styled(Box)(() => ({
   minWidth: "300px",
@@ -33,6 +34,11 @@ const ButtonWrapper = styled(Button)(() => ({
 
 const ProtocolData = () => {
   const [counting, setCounting] = useState(false);
+  const [protoData, setProtoData] = useState({
+    totalSupply: "0",
+    totalHolders: "0",
+    totalDIDs: "0",
+  });
 
   const loadCount = useCallback(() => {
     const protoEle = document.getElementById("protoData");
@@ -49,6 +55,23 @@ const ProtocolData = () => {
       setCounting(false);
       return false;
     }
+  }, []);
+
+  const handleValue = (value) => {
+    console.log("value:", value.replace(",", ""));
+    console.log("value:", Number(value.replace(",", "")));
+    return Number(value.replaceAll(",", ""));
+  };
+
+  const getProtocolData = async () => {
+    const resp = await get("/api/v1/accountService/account/statistics");
+    console.log("res:", resp);
+    if (resp && resp.code === 200) {
+      setProtoData(resp.data);
+    }
+  };
+  useEffect(() => {
+    getProtocolData();
   }, []);
 
   useEffect(() => {
@@ -117,7 +140,7 @@ const ProtocolData = () => {
           <DateItemBox>
             <CountUp
               start={0}
-              end={7563300}
+              end={handleValue(protoData.totalSupply)}
               separator=","
               duration={2}
               enableScrollSpy={true}
@@ -140,7 +163,7 @@ const ProtocolData = () => {
           <DateItemBox>
             <CountUp
               start={0}
-              end={12364}
+              end={handleValue(protoData.totalHolders)}
               separator=","
               enableScrollSpy={true}
               delay={0}
@@ -156,7 +179,7 @@ const ProtocolData = () => {
           <DateItemBox>
             <CountUp
               start={0}
-              end={52158}
+              end={handleValue(protoData.totalDIDs)}
               separator=","
               enableScrollSpy={true}
               delay={0}
