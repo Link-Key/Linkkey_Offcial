@@ -70,6 +70,7 @@ const ProtocolData = () => {
       setProtoData(resp.data);
     }
   };
+
   useEffect(() => {
     getProtocolData();
   }, []);
@@ -154,8 +155,8 @@ const ProtocolData = () => {
               )}
             </CountUp>
             <Typography>Total Supply</Typography>
-            <ButtonWrapper href="https://polygonscan.com/token/0x5CA9A8405499a1Ee8fbB1849f197b2b7e518985f">
-              To Polygonscan
+            <ButtonWrapper href="https://www.oklink.com/polygon/token/0x5CA9A8405499a1Ee8fbB1849f197b2b7e518985f">
+              To OKLink
             </ButtonWrapper>
           </DateItemBox>
         </Flip>
@@ -170,8 +171,8 @@ const ProtocolData = () => {
               redraw={counting}
             />
             <Typography>Total Holders</Typography>
-            <ButtonWrapper href="https://polygonscan.com/token/0x5CA9A8405499a1Ee8fbB1849f197b2b7e518985f">
-              To Polygonscan
+            <ButtonWrapper href="https://www.oklink.com/polygon/token/0x5CA9A8405499a1Ee8fbB1849f197b2b7e518985f">
+              To OKLink
             </ButtonWrapper>
           </DateItemBox>
         </Flip>
@@ -186,8 +187,8 @@ const ProtocolData = () => {
               redraw={counting}
             />
             <Typography>Total DIDs</Typography>
-            <ButtonWrapper href="https://polygonscan.com/token/0x19ad2b1f012349645c3173ea63f98948a2b43d27">
-              To Polygonscan
+            <ButtonWrapper href="https://www.oklink.com/polygon/token/0x19AD2b1F012349645C3173EA63F98948A2b43d27">
+              To OKLink
             </ButtonWrapper>
           </DateItemBox>
         </Flip>

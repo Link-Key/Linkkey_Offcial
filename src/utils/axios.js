@@ -3,6 +3,7 @@ import axios from "axios";
 // create axios instance
 const http = axios.create({
   // request connect timeout
+  // baseURL: "https://sns.chat",
   timeout: 2 * 60 * 1000,
   // withCredentials: true,
 });
