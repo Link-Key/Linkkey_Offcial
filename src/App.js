@@ -1,18 +1,14 @@
-import { ThemeProvider } from "@mui/system";
-import { darkTheme } from "./config/theme";
+import { Route, Routes } from "react-router-dom";
 import Home from "./pages/home";
-import { ScreenContextProvider } from "./provider/screen";
-import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import ActiveLandPage from "./pages/ActiveLandPage";
 
 function App() {
   return (
-    <ScreenContextProvider>
-      <ThemeProvider theme={darkTheme}>
-        <Home />
-      </ThemeProvider>
-      <ToastContainer />
-    </ScreenContextProvider>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/active" element={<ActiveLandPage />} />
+      <Route path="*" element={<Home />} />
+    </Routes>
   );
 }
 
