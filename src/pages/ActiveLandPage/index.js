@@ -71,6 +71,7 @@ const ActiveLandPage = () => {
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         backgroundPositionX: "center",
+        backgroundPositionY: "-5px",
         margin: "0 auto",
         paddingBottom: "30px",
       }}
