@@ -1,66 +1,91 @@
-import { Box, Container, Typography, styled } from "@mui/material";
-import { ReactComponent as Back } from "./Icons/back.svg";
+import { Box, styled } from "@mui/material";
+import BackPNG from "./images/back.png";
 import { ReactComponent as okx } from "./Icons/okx.svg";
-import { ReactComponent as title } from "./Icons/title.svg";
+import { ReactComponent as sns } from "./Icons/sns.svg";
+import { ReactComponent as freeMint } from "./Icons/freeMint.svg";
+import { ReactComponent as snapShot } from "./Icons/snapshot.svg";
+import { ReactComponent as endTime } from "./Icons/endTime.svg";
+import { ReactComponent as coming } from "./Icons/coming.svg";
 import { ReactComponent as bottom } from "./Icons/bottom.svg";
 import FlipCountdown from "@rumess/react-flip-countdown";
-import styles from "./index.less";
-
-const BackImage = styled(Back)(() => ({
-  position: "absolute",
-}));
 
 const OKX = styled(okx)(() => ({
-  position: "absolute",
-  left: "0",
-  right: "0",
+  width: "30%",
+  height: "100%",
   margin: "0 auto",
-  marginTop: "75px",
-  // zIndex: 1,
+  marginTop: "5.5%",
 }));
 
-const Title = styled(title)(() => ({
-  position: "absolute",
-  left: "0",
-  right: "0",
+const SNS = styled(sns)(() => ({
+  width: "50%",
+  height: "100%",
   margin: "0 auto",
-  marginTop: "290px",
+  marginTop: "17%",
+}));
+
+const FreeMint = styled(freeMint)(() => ({
+  width: "50%",
+  height: "100%",
+  margin: "0 auto",
+  marginTop: "4.5%",
+}));
+
+const SnapShot = styled(snapShot)(() => ({
+  width: "50%",
+  height: "100%",
+  margin: "0 auto",
+  marginTop: "6%",
+}));
+
+const EndTime = styled(endTime)(() => ({
+  width: "50%",
+  height: "100%",
+  margin: "0 auto",
+  marginTop: "1%",
+}));
+
+const Coming = styled(coming)(() => ({
+  width: "90%",
+  height: "100%",
+  margin: "0 auto",
+  marginTop: "6%",
 }));
 
 const Bottom = styled(bottom)(() => ({
-  position: "absolute",
-  left: "0",
-  right: "0",
+  width: "80%",
+  height: "100%",
   margin: "0 auto",
-  marginTop: "900px",
+  marginTop: "7%",
 }));
 
 const ActiveLandPage = () => {
   return (
     <Box
       sx={{
-        position: "relative",
-        width: "750px",
-        height: "100vh",
+        display: "flex",
+        flexDirection: "column",
+        width: "100%",
+        maxWidth: "750px",
+        minHeight: "100vh",
+        backgroundImage: `url(${BackPNG})`,
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        backgroundPositionX: "center",
         margin: "0 auto",
-        zIndex: 0,
+        paddingBottom: "30px",
       }}
     >
-      <BackImage />
       <OKX />
-      <Title />
+      <SNS />
+      <FreeMint />
+      <SnapShot />
+      <EndTime />
+      <Coming />
 
       <Box
         sx={{
-          position: "absolute",
-          left: "0",
-          right: "0",
           margin: "0 auto",
-          marginTop: "700px",
-          "&.flip-countdown.size-medium .flip-countdown-piece .flip-countdown-title":
-            {
-              color: "white",
-            },
+          marginTop: "6.5%",
         }}
       >
         <FlipCountdown
@@ -72,9 +97,7 @@ const ActiveLandPage = () => {
           hourTitle="Hours"
           minuteTitle="Minutes"
           titlePosition="bottom"
-          // size="large"
           endAt={"2023-04-18 16:00:00"} // Date/Time
-          className={styles.demo}
         />
       </Box>
 
