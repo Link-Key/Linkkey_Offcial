@@ -6,7 +6,8 @@ import aragon from "../../../assets/images/cooperator/aragon.png";
 import xmtp from "../../../assets/images/cooperator/xmtp.png";
 // import solid from "../../../assets/images/cooperator/solid.png";
 import okx from "../../../assets/images/cooperator/okx.png";
-import kava from "../../../assets/images/cooperator/kava.png";
+import bitKeep from "../../../assets/images/cooperator/bitkeep.png";
+import xdao from "../../../assets/images/cooperator/xdao.png";
 import filecoin from "../../../assets/images/cooperator/filecoin.png";
 import lens from "../../../assets/images/cooperator/lens.png";
 import relation from "../../../assets/images/cooperator/relation.png";
@@ -114,8 +115,8 @@ const Cooperator = () => {
           Rarible
         </CooperatorBoxItem>
         <CooperatorBoxItem>
-          <img src={aragon} alt="aragon" />
-          Aragon
+          <img src={xdao} alt="aragon" />
+          XDAO
         </CooperatorBoxItem>
         <CooperatorBoxItem>
           <img src={xmtp} alt="xmtp" />
@@ -127,8 +128,8 @@ const Cooperator = () => {
           OKX
         </CooperatorBoxItem>
         <CooperatorBoxItem>
-          <img src={kava} alt="kava" />
-          KAVA
+          <img src={bitKeep} alt="bitKeep" />
+          BitKeep
         </CooperatorBoxItem>
         <CooperatorBoxItem>
           <img src={filecoin} alt="filecoin" />
