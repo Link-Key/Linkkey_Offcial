@@ -18,7 +18,7 @@ const OKX = styled(okx)(() => ({
 }));
 
 const SNS = styled(sns)(() => ({
-  width: "50%",
+  width: "20%",
   height: "100%",
   margin: "0 auto",
   marginTop: "17%",
@@ -86,8 +86,8 @@ const ActiveLandPage = () => {
       <OKX />
       <SNS />
       <FreeMint />
-      <SnapShot />
-      <EndTime />
+      {/* <SnapShot />
+      <EndTime /> */}
       <Coming />
 
       <Box
