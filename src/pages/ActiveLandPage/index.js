@@ -1,4 +1,4 @@
-import { Box, styled } from "@mui/material";
+import { Box, Button, styled } from "@mui/material";
 import BackPNG from "./images/back.png";
 import { ReactComponent as okx } from "./Icons/okx.svg";
 import { ReactComponent as sns } from "./Icons/sns.svg";
@@ -6,6 +6,7 @@ import { ReactComponent as freeMint } from "./Icons/freeMint.svg";
 import { ReactComponent as snapShot } from "./Icons/snapshot.svg";
 import { ReactComponent as endTime } from "./Icons/endTime.svg";
 import { ReactComponent as coming } from "./Icons/coming.svg";
+import { ReactComponent as price } from "./Icons/price.svg";
 import { ReactComponent as bottom } from "./Icons/bottom.svg";
 import FlipCountdown from "@rumess/react-flip-countdown";
 
@@ -51,8 +52,15 @@ const Coming = styled(coming)(() => ({
   marginTop: "6%",
 }));
 
-const Bottom = styled(bottom)(() => ({
+const Price = styled(price)(() => ({
   width: "80%",
+  height: "100%",
+  margin: "0 auto",
+  marginTop: "7%",
+}));
+
+const Bottom = styled(bottom)(() => ({
+  width: "60%",
   height: "100%",
   margin: "0 auto",
   marginTop: "7%",
@@ -101,6 +109,23 @@ const ActiveLandPage = () => {
           endAt={"2023-04-18 16:00:00"} // Date/Time
         />
       </Box>
+
+      <Price />
+      <Button
+        sx={{
+          width: "33%",
+          margin: "0 auto",
+          marginTop: "7%",
+          fontWeight: 800,
+        }}
+        onClick={() => {
+          window.open(
+            "https://gleam.io/Fv5ym/okx-wallet-x-linkkey-super-rewards"
+          );
+        }}
+      >
+        Apply now
+      </Button>
 
       <Bottom />
     </Box>
