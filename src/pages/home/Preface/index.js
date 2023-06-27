@@ -1,157 +1,73 @@
-import {
-  Container,
-  Box,
-  Typography,
-  Button,
-  Stack,
-  IconButton,
-} from "@mui/material";
-import { memo } from "react";
-import { Fade } from "react-reveal";
-import LightSpeed from "react-reveal/LightSpeed";
+import { Box, Link, Typography } from '@mui/material';
+import { memo } from 'react';
+import NASA from '../../../assets/images/nasa-1.jpg';
+import { ReactComponent as NASALogo } from '../../../assets/icon/nasa_logo.svg';
+import TwitterIcon from '@mui/icons-material/Twitter';
 
-import ReactTyped from "react-typed";
-import NASA from "../../../assets/images/nasa-1.jpg";
-// import SnsRelation from "../../../assets/images/linkkey-graph.png";
-// import PolygonCircle from "../../../assets/images/polygonCircle.png";
-import PolygonCircle from "../../../assets/images/polygon-grant.png";
-
-import { linkList } from "../../../config/const";
+import './index.css';
 
 const Preface = () => {
-  return (
-    <Container
-      maxWidth="lg"
-      // sx={{
-      //   paddingTop: { xs: "15vh", sm: "15vh", md: "25vh" },
-      // }}
-    >
-      {/*<Box*/}
-      {/*  sx={{*/}
-      {/*    height: { xs: "85vh", sm: "85vh", md: "75vh" },*/}
-      {/*  }}*/}
-      {/*>*/}
-      {/*  <Box*/}
-      {/*    sx={{*/}
-      {/*      fontWeight: 900,*/}
-      {/*      fontSize: { xs: "40px", sm: "70px", md: "91px" },*/}
-      {/*      color: "#ea6060",*/}
-      {/*      span: {*/}
-      {/*        color: "#333",*/}
-      {/*      },*/}
-      {/*    }}*/}
-      {/*  >*/}
-      {/*    <span>BUILD</span> SOCIAL CIRCLE <span>ON</span> WEB3*/}
-      {/*  </Box>*/}
-      {/*  <LightSpeed right>*/}
-      {/*    <Typography*/}
-      {/*      sx={{*/}
-      {/*        color: "#6C6C6C",*/}
-      {/*        fontSize: { xs: "20px", sm: "25px", md: "36px" },*/}
-      {/*        fontWeight: 700,*/}
-      {/*        marginTop: "12px",*/}
-      {/*      }}*/}
-      {/*    >*/}
-      {/*      WEB3{" "}*/}
-      {/*      <ReactTyped*/}
-      {/*        strings={["DOMAIN", "IDENTITY", "CHAT", "POST"]}*/}
-      {/*        typeSpeed={40}*/}
-      {/*        backSpeed={50}*/}
-      {/*        loop*/}
-      {/*        style={{ color: "#ea6060" }}*/}
-      {/*      />*/}
-      {/*    </Typography>*/}
-      {/*  </LightSpeed>*/}
-      {/*  <Typography*/}
-      {/*    sx={{*/}
-      {/*      maxWidth: "943px",*/}
-      {/*      fontSize: { xs: "15px", md: "20px" },*/}
-      {/*      color: "#9A9A9A",*/}
-      {/*      marginTop: "24px",*/}
-      {/*    }}*/}
-      {/*  >*/}
-      {/*    LINKKEY is a universal protocol for building WEB3 social circles, SNS*/}
-      {/*    personal domain name service to create a social identity system for*/}
-      {/*    circles, LINKNFT contract to define the relationship between friends*/}
-      {/*    and groups, LINKCHAT to achieve encrypted communication between*/}
-      {/*    friends & groups, LINKPOST to build social interaction between friends*/}
-      {/*    in circles.*/}
-      {/*  </Typography>*/}
-      {/*  <Box*/}
-      {/*    sx={{*/}
-      {/*      marginTop: "40px",*/}
-      {/*      display: "flex",*/}
-      {/*      gap: "22px",*/}
-      {/*      height: "46px",*/}
-      {/*      flexWrap: { xs: "wrap", sm: "wrap", md: "row" },*/}
-      {/*    }}*/}
-      {/*  >*/}
-      {/*    <Button*/}
-      {/*      sx={{*/}
-      {/*        width: "270px",*/}
-      {/*        height: "50px",*/}
-      {/*        background: "white",*/}
-      {/*        color: "#ea6060",*/}
-      {/*        border: "2px solid #ea6060",*/}
-      {/*        borderRadius: "10px",*/}
-      {/*        fontSize: { xs: "15px", md: "20px" },*/}
-      {/*        "&:hover": {*/}
-      {/*          background: "#ffffffcc",*/}
-      {/*        },*/}
-      {/*      }}*/}
-      {/*      href={linkList.sns}*/}
-      {/*    >*/}
-      {/*      REGISTY SNS DOMAIN*/}
-      {/*    </Button>*/}
-      {/*    <Stack*/}
-      {/*      direction="row"*/}
-      {/*      spacing={2}*/}
-      {/*      alignItems="center"*/}
-      {/*      justifyContent="center"*/}
-      {/*    >*/}
-      {/*      <Button*/}
-      {/*        sx={{*/}
-      {/*          width: "270px",*/}
-      {/*          height: "50px",*/}
-      {/*          background: "#ea6060",*/}
-      {/*          color: "white",*/}
-      {/*          borderRadius: "10px",*/}
-      {/*          fontSize: { xs: "15px", md: "20px" },*/}
-      {/*          "&:hover": {*/}
-      {/*            background: "#ea6060cc",*/}
-      {/*          },*/}
-      {/*        }}*/}
-      {/*        href={linkList.app}*/}
-      {/*      >*/}
-      {/*        LAUNCH LINKKEY APP*/}
-      {/*      </Button>*/}
-      {/*      <IconButton*/}
-      {/*        sx={{ img: { width: "100px" } }}*/}
-      {/*        href="https://twitter.com/Polygon_Space1/status/1472628456471302144"*/}
-      {/*      >*/}
-      {/*        <img src={PolygonCircle} alt="polygon" />*/}
-      {/*      </IconButton>*/}
-      {/*    </Stack>*/}
-      {/*  </Box>*/}
-      {/*</Box>*/}
-      <Fade left big>
-        <Box
-          sx={{
-            textAlign: "center",
-            img: {
-              // maxWidth: "95%",
-              width: "100%",
-              marginTop: "100px",
-              // marginBottom: "100px",
-            },
-          }}
-        >
-          {/*<img src={SnsRelation} alt="snsRelation" />*/}
-          <img src={NASA} alt="NASA" />
-        </Box>
-      </Fade>
-    </Container>
-  );
+	return (
+		<Box
+			sx={{
+				width: '100%',
+				height: '100vh',
+				background: `url(${NASA})`,
+				backgroundSize: 'cover',
+				backgroundPosition: 'center',
+			}}
+		>
+			<Box
+				sx={{
+					width: '100%',
+					display: 'flex',
+					justifyContent: 'space-between',
+					alignItems: 'center',
+					padding: '0px 60px',
+					height: '90px',
+					alignSelf: 'flex-start',
+				}}
+			>
+				{/* Header */}
+				<NASALogo
+					style={{
+						width: '60px',
+						height: '60px',
+					}}
+				/>
+				<Link href="https://twitter.com/NASA_coins" target="_blank">
+					<TwitterIcon
+						sx={{ fontSize: '24px', color: '#1d9bf0', cursor: 'pointer' }}
+					/>
+				</Link>
+			</Box>
+			<Box
+				sx={{
+					position: 'relative',
+					top: '30vh',
+					width: '100%',
+					textAlign: 'center',
+				}}
+			>
+				<Typography
+					className="shine"
+					sx={{
+						fontSize: '68px',
+						fontWeight: 600,
+						// color: ' #fff',
+						// textShadow:
+						// 	'0 0 5px #fff,0 0 10px #fff,0 0 20px #fff,0 0 40px #0ff,0 0 80px #0ff,0 0 90px #0ff,0 0 100px #0ff,0 0 150px #0ff;',
+					}}
+				>
+					NASA COIN
+				</Typography>
+
+				<Typography className="shine" sx={{ fontSize: '16px' }}>
+					Take everyone to the sky!
+				</Typography>
+			</Box>
+		</Box>
+	);
 };
 
 export default memo(Preface);
