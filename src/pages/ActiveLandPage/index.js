@@ -3,8 +3,8 @@ import BackPNG from "./images/back.png";
 import { ReactComponent as okx } from "./Icons/okx.svg";
 import { ReactComponent as sns } from "./Icons/sns.svg";
 import { ReactComponent as freeMint } from "./Icons/freeMint.svg";
-import { ReactComponent as snapShot } from "./Icons/snapshot.svg";
-import { ReactComponent as endTime } from "./Icons/endTime.svg";
+// import { ReactComponent as snapShot } from "./Icons/snapshot.svg";
+// import { ReactComponent as endTime } from "./Icons/endTime.svg";
 import { ReactComponent as coming } from "./Icons/coming.svg";
 import { ReactComponent as price } from "./Icons/price.svg";
 import { ReactComponent as bottom } from "./Icons/bottom.svg";
@@ -31,19 +31,19 @@ const FreeMint = styled(freeMint)(() => ({
   marginTop: "4.5%",
 }));
 
-const SnapShot = styled(snapShot)(() => ({
-  width: "50%",
-  height: "100%",
-  margin: "0 auto",
-  marginTop: "6%",
-}));
+// const SnapShot = styled(snapShot)(() => ({
+//   width: "50%",
+//   height: "100%",
+//   margin: "0 auto",
+//   marginTop: "6%",
+// }));
 
-const EndTime = styled(endTime)(() => ({
-  width: "50%",
-  height: "100%",
-  margin: "0 auto",
-  marginTop: "1%",
-}));
+// const EndTime = styled(endTime)(() => ({
+//   width: "50%",
+//   height: "100%",
+//   margin: "0 auto",
+//   marginTop: "1%",
+// }));
 
 const Coming = styled(coming)(() => ({
   width: "90%",

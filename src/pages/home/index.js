@@ -24,12 +24,12 @@ const Home = () => {
     >
       <Header />
       <Preface />
-      <SocialProtocol />
-      <ProtocolData />
-      <TokenOmic />
-      <TryProduct />
-      <DAO />
-      <Cooperator />
+      {/*<SocialProtocol />*/}
+      {/*<ProtocolData />*/}
+      {/*<TokenOmic />*/}
+      {/*<TryProduct />*/}
+      {/*<DAO />*/}
+      {/*<Cooperator />*/}
 
       <Footer />
     </Box>

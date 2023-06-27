@@ -2,7 +2,7 @@ import { Box, Container, styled, Typography } from "@mui/material";
 import polygon from "../../../assets/images/cooperator/polygon.jpg";
 import opensea from "../../../assets/images/cooperator/opensea.png";
 import rarible from "../../../assets/images/cooperator/rarible.png";
-import aragon from "../../../assets/images/cooperator/aragon.png";
+// import aragon from "../../../assets/images/cooperator/aragon.png";
 import xmtp from "../../../assets/images/cooperator/xmtp.png";
 // import solid from "../../../assets/images/cooperator/solid.png";
 import okx from "../../../assets/images/cooperator/okx.png";
