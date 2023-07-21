@@ -41,6 +41,7 @@ const Header = () => {
 				height: '90px',
 				alignSelf: 'flex-start',
 				background: 'transparent',
+				zIndex: 2,
 			}}
 		>
 			{/* Header */}

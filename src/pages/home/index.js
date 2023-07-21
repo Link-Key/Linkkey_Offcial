@@ -4,6 +4,7 @@ import { useScreen } from '../../provider/screen';
 import Header from '../../components/Header';
 import StarsCanvas from '../../components/Star';
 import Visual from './Visual';
+import Claim from './Claim';
 
 const Home = () => {
 	const theme = useTheme();
@@ -22,7 +23,10 @@ const Home = () => {
 			<StarsCanvas />
 			<Header />
 			<Preface />
-			<Visual />
+			<Box sx={{ position: 'relative', zIndex: 1 }}>
+				<Visual />
+				<Claim />
+			</Box>
 		</Box>
 	);
 };
