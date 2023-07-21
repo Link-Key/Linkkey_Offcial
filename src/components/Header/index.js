@@ -1,208 +1,84 @@
-import { ChevronLeft } from "@mui/icons-material";
 import {
-  AppBar,
-  Box,
-  Container,
-  Drawer,
-  IconButton,
-  Link,
-  List,
-  ListItem,
-  styled,
-} from "@mui/material";
-import { useState } from "react";
-import { ReactComponent as Logo } from "../../assets/icon/logo.svg";
-import { linkList } from "../../config/const";
-import DehazeIcon from "@mui/icons-material/Dehaze";
+	Box,
+	Button,
+	Container,
+	Link,
+	Stack,
+	Typography,
+	styled,
+} from '@mui/material';
+import { ReactComponent as NASALogo } from '../../assets/icon/nasa_logo.svg';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import { useConnectModal } from '@rainbow-me/rainbowkit';
+import { useAccount, useDisconnect } from 'wagmi';
+import AccountBalanceWalletIcon from '@mui/icons-material/AccountBalanceWallet';
+import { splitAddress } from '../../utils';
 
-const HeaderWrapper = styled(Box)(() => ({
-  display: "flex",
-  justifyContent: "space-between",
-  alignContent: "center",
-  listStyleType: "none",
-  fontSize: "16px",
-  a: {
-    color: "#101010",
-    display: "flex",
-    alignItems: "center",
-    ":hover": {
-      color: "#ea6060",
-    },
-  },
+const ConnectButton = styled(Button)(() => ({
+	svg: {
+		marginRight: '5px',
+	},
 }));
 
 const Header = () => {
-  const [open, setOpen] = useState(false);
+	const { isConnected, address } = useAccount();
+	const { disconnect } = useDisconnect();
 
-  const handleDrawerOpen = () => {
-    setOpen(true);
-  };
+	const { openConnectModal } = useConnectModal();
 
-  const handleDrawerClose = () => {
-    setOpen(false);
-  };
-  return (
-    <AppBar
-      position="fixed"
-      sx={{
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        background: "white",
-        height: "70px",
-        boxShadow: "none",
-      }}
-    >
-      <Container maxWidth="lg">
-        <HeaderWrapper
-          sx={{
-            display: {
-              sm: "flex",
-              xs: "none",
-            },
-          }}
-        >
-          <Link href={linkList.docs} target="_blank" underline="none">
-            Docs
-          </Link>
-          <Link href={linkList.blog} target="_blank" underline="none">
-            Blog
-          </Link>
-          <Link href={linkList.whitePaper} target="_blank" underline="none">
-            WhitePaper
-          </Link>
-          <Link
-            target="_blank"
-            underline="none"
-            sx={{
-              svg: {
-                width: 100,
-              },
-            }}
-            onClick={() => {
-              const bodyEle = document.body;
-              bodyEle.scrollIntoView({
-                block: "start",
-                behavior: "smooth",
-              });
-            }}
-          >
-            <Logo />
-          </Link>
-          <Link href={linkList.sns} target="_blank" underline="none">
-            SNS
-          </Link>
-          {/*<Link*/}
-          {/*  target="_blank"*/}
-          {/*  underline="none"*/}
-          {/*  onClick={() => {*/}
-          {/*    ToastMention({ message: "Coming soon!" });*/}
-          {/*  }}*/}
-          {/*>*/}
-          <Link target="_blank" underline="none" href={linkList.invest}>
-            InvestUs
-          </Link>
-          <Link href={linkList.roadMap} target="_blank" underline="none">
-            RoadMap
-          </Link>
-        </HeaderWrapper>
-      </Container>
+	return (
+		<Container
+			sx={{
+				position: 'absolute',
+				left: 0,
+				right: 0,
+				margin: '0 auto',
+				width: '100%',
+				display: 'flex',
+				justifyContent: 'space-between',
+				alignItems: 'center',
+				padding: '0px 60px',
+				height: '90px',
+				alignSelf: 'flex-start',
+				background: 'transparent',
+			}}
+		>
+			{/* Header */}
+			<NASALogo
+				style={{
+					width: '60px',
+					height: '60px',
+				}}
+			/>
+			<Stack direction="row" alignItems="center" gap={{ sm: 1, lg: 4 }}>
+				<Link href="https://twitter.com/NASA_coins" target="_blank">
+					<TwitterIcon
+						sx={{ fontSize: '24px', color: '#1d9bf0', cursor: 'pointer' }}
+					/>
+				</Link>
 
-      <Box
-        sx={{
-          display: { xs: "block", sm: "none" },
-        }}
-      >
-        <IconButton
-          sx={{
-            width: "35px",
-            position: "absolute",
-            top: "-20px",
-            left: "10px",
-            bottom: 0,
-            right: 0,
-          }}
-          onClick={handleDrawerOpen}
-        >
-          <DehazeIcon
-            sx={{
-              fontSize: 35,
-              color: "#ea6060",
-            }}
-          />
-        </IconButton>
-        <Link
-          target="_blank"
-          underline="none"
-          sx={{
-            svg: {
-              width: 100,
-            },
-            cursor: "pointer",
-          }}
-          onClick={() => {
-            const bodyEle = document.body;
-            bodyEle.scrollIntoView({
-              block: "start",
-              behavior: "smooth",
-            });
-          }}
-        >
-          <Logo />
-        </Link>
-      </Box>
-
-      <Drawer open={open} anchor="left" onClose={handleDrawerClose}>
-        <Box
-          sx={{
-            display: "flex",
-            justifyContent: "flex-end",
-          }}
-        >
-          <IconButton onClick={handleDrawerClose}>
-            <ChevronLeft
-              sx={{
-                fontSize: "50px",
-              }}
-            />
-          </IconButton>
-        </Box>
-        <List
-          sx={{
-            width: "100vw",
-            ".MuiListItem-root": {
-              display: "block",
-              textAlign: "center",
-              fontSize: "30px",
-              "&:hover": {
-                color: "white",
-              },
-            },
-          }}
-          onClick={handleDrawerClose}
-        >
-          <Link href={linkList.docs} target="_blank" underline="none">
-            <ListItem>Docs</ListItem>
-          </Link>
-          <Link href={linkList.blog} target="_blank" underline="none">
-            <ListItem>Blog</ListItem>
-          </Link>
-          <Link href={linkList.whitePaper} target="_blank" underline="none">
-            <ListItem>WhitePaper</ListItem>
-          </Link>
-          <Link href={linkList.sns} target="_blank" underline="none">
-            <ListItem>SNS</ListItem>
-          </Link>
-          <Link target="_blank" underline="none" href={linkList.invest}>
-            <ListItem>InvestUs</ListItem>
-          </Link>
-          <Link href={linkList.roadMap} target="_blank" underline="none">
-            <ListItem>RoadMap</ListItem>
-          </Link>
-        </List>
-      </Drawer>
-    </AppBar>
-  );
+				{isConnected ? (
+					<ConnectButton
+						onClick={() => {
+							disconnect();
+						}}
+					>
+						<AccountBalanceWalletIcon />
+						{splitAddress(address)}
+					</ConnectButton>
+				) : (
+					<ConnectButton
+						onClick={() => {
+							openConnectModal();
+						}}
+					>
+						<AccountBalanceWalletIcon />
+						Connect wallet
+					</ConnectButton>
+				)}
+			</Stack>
+		</Container>
+	);
 };
 
 export default Header;
