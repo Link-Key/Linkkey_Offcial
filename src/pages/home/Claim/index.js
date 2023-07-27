@@ -7,8 +7,44 @@ import {
 	styled,
 } from '@mui/material';
 
+import { ProgressBar, Step } from 'react-step-progress-bar';
 import TwitterBlue from '../../../assets/images/twitterBlue.png';
 import Explorer from '../../../assets/images/explorer.png';
+
+const Title = styled(Typography)(({ theme }) => ({
+	fontSize: '56px',
+	fontWeight: 700,
+	color: '#FFFFFFE5',
+	textAlign: 'center',
+	marginTop: '60px',
+
+	[theme.breakpoints.down('md')]: {
+		fontSize: '24px',
+	},
+}));
+
+const ProgressWrapper = styled(Box)(({ theme }) => ({
+	position: 'relative',
+
+	'.RSPBprogressBar': {
+		borderRadius: '50px',
+	},
+
+	'.RSPBprogression': {
+		zIndex: 0,
+		borderRadius: '50px',
+		'::after': {
+			display: 'block',
+			position: 'relative',
+			content: '"🛰️"',
+			left: '100%',
+			top: '-6px',
+			zIndex: 999,
+			fontSize: '50px',
+			transform: 'translateX(-20px)',
+		},
+	},
+}));
 
 const ClaimItem = styled(Box)(() => ({
 	display: 'flex',
@@ -27,7 +63,46 @@ const ClaimItem = styled(Box)(() => ({
 const Claim = () => {
 	return (
 		<Container sx={{ padding: '100px 0' }}>
-			<Stack direction="row" justifyContent="space-between">
+			<Title>Twitter Blue VS Explorer</Title>
+
+			<Stack direction="row" justifyContent="space-between" mb={1} pt={7}>
+				<Typography sx={{ color: '#fff' }}>Twitter Blue</Typography>
+				<Typography sx={{ color: '#fff' }}>32323.3232 NASA</Typography>
+			</Stack>
+			<ProgressWrapper>
+				<ProgressBar
+					filledBackground="linear-gradient(90deg, #0057FF 0.63%, #77FFCE 100%)"
+					percent={20}
+					height={40}
+				/>
+			</ProgressWrapper>
+
+			<ProgressWrapper
+				sx={{
+					marginTop: '56px',
+					'.RSPBprogression': {
+						'::after': {
+							content: '"🛸"',
+						},
+					},
+				}}
+			>
+				<ProgressBar
+					filledBackground="linear-gradient(to right, #CE42FF, #248CC7)"
+					percent={30}
+					height={40}
+				/>
+			</ProgressWrapper>
+			<Stack direction="row" justifyContent="space-between" mt={1}>
+				<Typography sx={{ color: '#fff' }}>Explorer</Typography>
+				<Typography sx={{ color: '#fff' }}>32323.3232 NASA</Typography>
+			</Stack>
+
+			<Stack
+				direction="row"
+				justifyContent="space-between"
+				sx={{ paddingTop: '56px' }}
+			>
 				<ClaimItem>
 					<Box
 						sx={{
