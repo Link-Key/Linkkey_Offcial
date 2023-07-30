@@ -15,6 +15,7 @@ import 'react-step-progress-bar/styles.css';
 import './index.css';
 import '@rainbow-me/rainbowkit/styles.css';
 import 'inter-ui/inter.css';
+import { Toaster } from 'react-hot-toast';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -24,6 +25,14 @@ root.render(
 				<WagmiConfig config={wagmiConfig}>
 					<RainbowKitProvider chains={chains} appInfo={AppInfo}>
 						<App />
+						<Toaster
+							containerStyle={{ fontWeight: 600 }}
+							toastOptions={{
+								style: {
+									fontWeight: 600,
+								},
+							}}
+						/>
 					</RainbowKitProvider>
 				</WagmiConfig>
 			</BrowserRouter>

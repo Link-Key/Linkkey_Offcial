@@ -1,3 +1,5 @@
+import { Typography, styled } from '@mui/material';
+
 export const LinerFontStyles = {
 	background: 'linear-gradient(90.13deg, #00cea8 1.9%, #bf61ff 97.5%)',
 	WebkitBackgroundClip: 'text',
@@ -25,3 +27,14 @@ export const linearBorder = {
 		background: 'linear-gradient(to right, #CE42FF, #248CC7)',
 	},
 };
+
+export const Title = styled(Typography)(({ theme }) => ({
+	fontSize: '56px',
+	fontWeight: 700,
+	color: '#FFFFFFE5',
+	textAlign: 'center',
+
+	[theme.breakpoints.down('md')]: {
+		fontSize: '24px',
+	},
+}));

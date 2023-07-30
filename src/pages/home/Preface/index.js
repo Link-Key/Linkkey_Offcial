@@ -8,6 +8,7 @@ import { LinerFontStyles } from '../../../components/CommonUI';
 
 import { motion } from 'framer-motion';
 import { scrollToAnchor } from '../../../utils';
+import Visual from '../Visual';
 
 const Preface = () => {
 	return (
@@ -47,20 +48,23 @@ const Preface = () => {
 								color: 'white',
 								fontSize: '68px',
 								fontWeight: 600,
+								textAlign: 'left',
 							}}
 						>
-							NASA COIN
+							$NASA
 						</Typography>
 
 						<Typography
 							className="shine"
 							sx={{ fontSize: '32px', color: '#7d8590', ...LinerFontStyles }}
 						>
-							Take everyone to the sky!
+							Take everyone to the sky via WEB3!
 						</Typography>
 					</Box>
 					<img src={Board} />
 				</Stack>
+
+				<Visual />
 			</Container>
 			<Box
 				sx={{

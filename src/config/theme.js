@@ -15,6 +15,7 @@ const darkTheme = responsiveFontSizes(
 			allVariants: {
 				fontWeight: 400,
 				fontFamily: 'Inter',
+				color: '#fff',
 			},
 		},
 		palette: {
@@ -39,6 +40,16 @@ const darkTheme = responsiveFontSizes(
 							color: '#a3a3a3',
 							background: 'transparent',
 						},
+					},
+				},
+			},
+			MuiContainer: {
+				defaultProps: {
+					disableGutters: true,
+				},
+				styleOverrides: {
+					root: {
+						padding: 0,
 					},
 				},
 			},

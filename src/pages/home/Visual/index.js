@@ -3,7 +3,7 @@ import moment from 'moment';
 import { useTimer } from 'react-timer-hook';
 
 const Title = styled(Typography)(({ theme }) => ({
-	fontSize: '56px',
+	fontSize: '28px',
 	fontWeight: 700,
 	color: '#FFFFFFE5',
 	textAlign: 'center',
@@ -15,7 +15,7 @@ const Title = styled(Typography)(({ theme }) => ({
 }));
 
 const TimeWrapper = styled(Box)(({ theme }) => ({
-	width: '100px',
+	width: '80px',
 	height: '120px',
 	display: 'flex',
 	flexDirection: 'column',
@@ -33,7 +33,7 @@ const TimeWrapper = styled(Box)(({ theme }) => ({
 const Time = styled(Typography)(({ theme }) => ({
 	color: '#FFFFFFE5',
 	fontWeight: 700,
-	fontSize: '56px',
+	fontSize: '24px',
 
 	[theme.breakpoints.down('md')]: {
 		fontSize: '32px',
@@ -59,7 +59,6 @@ const Visual = () => {
 
 	return (
 		<Container
-			id="start"
 			sx={{
 				width: '100%',
 				minHeight: '400px',
@@ -70,7 +69,7 @@ const Visual = () => {
 				padding: '36px 0',
 			}}
 		>
-			<Title>About to start</Title>
+			<Title>start at</Title>
 			<Stack
 				direction="row"
 				justifyContent="center"
@@ -79,7 +78,7 @@ const Visual = () => {
 				sx={{
 					height: '100%',
 					fontSize: '100px',
-					paddingTop: '56px',
+					paddingTop: '14px',
 				}}
 			>
 				<TimeWrapper>
