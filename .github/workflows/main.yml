@@ -25,11 +25,11 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
 
-      # 使用 node:14
-      - name: use Node.js 14
+      # 使用 node:16
+      - name: use Node.js 16
         uses: actions/setup-node@v1
         with:
-          node-version: 14
+          node-version: 16
       # yarn install and build
       - name: yarn install and build
         run: |
