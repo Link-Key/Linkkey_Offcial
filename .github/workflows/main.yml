@@ -6,9 +6,9 @@ name: CI
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
-    branches: [ "main" ]
+    branches: [ "nasa_new" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "nasa_new" ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -56,5 +56,5 @@ jobs:
 #           REMOTE_PORT: '22'
           REMOTE_PORT: '53445'
 #           TARGET: '/home/ubuntu/linkkey-official/build'
-          TARGET: '/www/wwwroot/linkkey.io/build'
+          TARGET: '/www/wwwroot/test.nasacoin.com/build'
           EXCLUDE: "/node_modules/"
