@@ -7,37 +7,19 @@ import {
 	styled,
 } from '@mui/material';
 
-import { ProgressBar } from 'react-step-progress-bar';
 import TwitterBlue from '../../../assets/images/twitterBlue.png';
 import Explorer from '../../../assets/images/explorer.png';
 import { useState } from 'react';
 import { Title } from '../../../components/CommonUI';
+import ProgressBar from '@ramonak/react-progress-bar';
+import { toast } from 'react-hot-toast';
 
 const ProgressWrapper = styled(Box)(({ theme }) => ({
 	position: 'relative',
 
-	'.RSPBprogressBar': {
-		border: '1px solid #fff',
+	'.wrapper': {
+		border: '4px solid #fff',
 		borderRadius: '50px',
-		backgroundColor: 'transparent',
-	},
-
-	'.RSPBprogression': {
-		zIndex: 0,
-		borderRadius: '50px',
-		overflowX: 'hidden',
-		'::after': {
-			display: 'block',
-			position: 'relative',
-			content: '"%0"',
-			left: '100%',
-			top: '8px',
-			zIndex: 999,
-			fontSize: '24px',
-			fontWeight: 600,
-			color: '#fff',
-			transform: 'translateX(-65px)',
-		},
 	},
 }));
 
@@ -49,37 +31,43 @@ const ClaimItem = styled(Box)(() => ({
 	minWidth: '300px',
 	height: '300px',
 	padding: '24px',
-	borderRadius: '24px',
-	// ...linearBorder,
+	borderRadius: '20px',
 	backgroundColor: 'transparent',
-	boxShadow: 'inset 0px 0px 40px rgba(254, 219, 255, 0.5)',
+	border: '4px solid #fff',
 }));
 
 const GetNASA = () => {
-	const [twitterProgress, setTwitterProgress] = useState(0);
-	const [explorerProgress, setExplorerProgress] = useState(0);
+	const [totalProgress, setTotalProgress] = useState(100);
+	const [twitterProgress, setTwitterProgress] = useState(30);
+	const [explorerProgress, setExplorerProgress] = useState(20);
 
 	return (
 		<Container id="getNASA" sx={{ padding: '100px 0' }}>
 			<Title>Get $NASA</Title>
 
-			<Stack direction="row" justifyContent="space-between" mb={1} pt={7}>
-				<Typography sx={{ color: '#fff' }}>Twitter Blue</Typography>
-				<Typography sx={{ color: '#fff' }}>32323.3232 NASA</Typography>
-			</Stack>
-
-			<ProgressWrapper
-				sx={{
-					'.RSPBprogression': {
-						'::after': {
-							content: `'%${twitterProgress}'`,
-						},
-					},
-				}}
-			>
+			<ProgressWrapper>
+				<Typography mb={1} pt={7} sx={{ color: '#fff' }}>
+					Total progress of token distribution:
+				</Typography>
 				<ProgressBar
-					filledBackground="linear-gradient(90deg, #0057FF 0.63%, #77FFCE 100%)"
-					percent={twitterProgress}
+					className="wrapper"
+					completed={totalProgress}
+					// bgColor="linear-gradient(90deg, #81B337 0.63%, #1890FF 100%)"
+					bgColor="linear-gradient(to right, #81B337, #1890FF)"
+					baseBgColor="transparent"
+					height={40}
+				/>
+			</ProgressWrapper>
+
+			<ProgressWrapper>
+				<Typography mb={1} pt={7} sx={{ color: '#fff' }}>
+					White List
+				</Typography>
+				<ProgressBar
+					className="wrapper"
+					completed={twitterProgress}
+					bgColor="#1890FF"
+					baseBgColor="transparent"
 					height={40}
 				/>
 			</ProgressWrapper>
@@ -87,23 +75,19 @@ const GetNASA = () => {
 			<ProgressWrapper
 				sx={{
 					marginTop: '56px',
-					'.RSPBprogression': {
-						'::after': {
-							content: `'%${explorerProgress}'`,
-						},
-					},
 				}}
 			>
+				<Typography mb={1} sx={{ color: '#fff' }}>
+					Explorer
+				</Typography>
 				<ProgressBar
-					filledBackground="linear-gradient(to right, #CE42FF, #248CC7)"
-					percent={explorerProgress}
+					className="wrapper"
+					completed={explorerProgress}
 					height={40}
+					bgColor="#81B337"
+					baseBgColor="transparent"
 				/>
 			</ProgressWrapper>
-			<Stack direction="row" justifyContent="space-between" mt={1}>
-				<Typography sx={{ color: '#fff' }}>Explorer</Typography>
-				<Typography sx={{ color: '#fff' }}>32323.3232 NASA</Typography>
-			</Stack>
 
 			<Stack
 				direction="row"
@@ -139,6 +123,9 @@ const GetNASA = () => {
 						</Box>
 						<Button
 							onClick={() => {
+								toast.success(
+									'Congratulations to whitelist users, get FREE Claim'
+								);
 								setTwitterProgress((v) => v + 1);
 							}}
 						>

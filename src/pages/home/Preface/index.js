@@ -34,7 +34,7 @@ const Preface = () => {
 					justifyContent="space-between"
 					alignItems="center"
 					sx={{
-						paddingTop: '30vh',
+						paddingTop: '20vh',
 					}}
 				>
 					<Box
@@ -58,7 +58,7 @@ const Preface = () => {
 							className="shine"
 							sx={{ fontSize: '32px', color: '#7d8590', ...LinerFontStyles }}
 						>
-							Take everyone to the sky via WEB3!
+							The most memeable memecoin in existence.
 						</Typography>
 					</Box>
 					<img src={Board} />

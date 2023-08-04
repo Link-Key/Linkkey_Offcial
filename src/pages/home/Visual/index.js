@@ -69,7 +69,7 @@ const Visual = () => {
 				padding: '36px 0',
 			}}
 		>
-			<Title>start at</Title>
+			<Title>Start at</Title>
 			<Stack
 				direction="row"
 				justifyContent="center"

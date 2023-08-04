@@ -10,6 +10,7 @@ import React from 'react';
 import { Title } from '../../../components/CommonUI';
 
 import Triangle from '../../../assets/images/triangle.png';
+import AirdropsImg from '../../../assets/images/airdrops.png';
 import AssignmentLateOutlinedIcon from '@mui/icons-material/AssignmentLateOutlined';
 
 const Items = styled(Box)(() => ({
@@ -71,7 +72,11 @@ const Airdrops = () => {
 		<Container sx={{ paddingTop: '160px' }}>
 			<Title>Airdrops</Title>
 
-			<Box
+			<Box sx={{ img: { width: '100%', height: '100%', paddingTop: '100px' } }}>
+				<img src={AirdropsImg} alt="" />
+			</Box>
+
+			{/* <Box
 				sx={{
 					width: '100%',
 					border: '4px solid #fff',
@@ -102,6 +107,7 @@ const Airdrops = () => {
 							fontSize: '48px',
 							fontWeight: 600,
 							justifyItems: 'flex-end',
+							marginRight: '22px',
 						}}
 					>
 						70%
@@ -152,7 +158,7 @@ const Airdrops = () => {
 						</Box>
 					</Items>
 				))}
-			</Stack>
+			</Stack> */}
 
 			<Box>
 				<Stack
