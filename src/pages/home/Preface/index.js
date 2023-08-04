@@ -9,6 +9,7 @@ import { LinerFontStyles } from '../../../components/CommonUI';
 import { motion } from 'framer-motion';
 import { scrollToAnchor } from '../../../utils';
 import Visual from '../Visual';
+import ConnectWallet from '../../../components/ConnectWallet';
 
 const Preface = () => {
 	return (
@@ -34,19 +35,21 @@ const Preface = () => {
 					justifyContent="space-between"
 					alignItems="center"
 					sx={{
-						paddingTop: '20vh',
+						paddingTop: '25vh',
+						img: {
+							display: { xs: 'none', md: 'block' },
+						},
 					}}
 				>
 					<Box
 						sx={{
-							textAlign: 'center',
+							textAlign: 'left',
 						}}
 					>
 						<Typography
-							// className="shine"
 							sx={{
 								color: 'white',
-								fontSize: '68px',
+								fontSize: { xs: '32px', md: '68px' },
 								fontWeight: 600,
 								textAlign: 'left',
 							}}
@@ -56,10 +59,17 @@ const Preface = () => {
 
 						<Typography
 							className="shine"
-							sx={{ fontSize: '32px', color: '#7d8590', ...LinerFontStyles }}
+							sx={{
+								fontSize: { xs: '16px', md: '32px' },
+								color: '#7d8590',
+								...LinerFontStyles,
+							}}
 						>
 							The most memeable memecoin in existence.
 						</Typography>
+						<Box sx={{ display: { xs: 'block', md: 'none' } }}>
+							<ConnectWallet />
+						</Box>
 					</Box>
 					<img src={Board} />
 				</Stack>
@@ -76,7 +86,7 @@ const Preface = () => {
 					display: 'flex',
 					justifyContent: 'center',
 					alignItems: 'flex-start',
-					width: '35px',
+					width: { xs: '30px', md: '35px' },
 					height: '64px',
 					border: '3px solid #aaa6c3',
 					borderRadius: '50px',

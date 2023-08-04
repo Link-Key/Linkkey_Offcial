@@ -12,12 +12,12 @@ const Image = styled('img')(() => ({
 
 const Tokenomics = () => {
 	return (
-		<Container sx={{ paddingTop: '300px' }}>
+		<Container sx={{ paddingTop: { xs: '60px', md: '300px' } }}>
 			<Title>Tokenomics</Title>
 
 			<Box
 				sx={{
-					width: '600px',
+					width: { xs: '100%', md: '600px' },
 					border: '4px solid #fff',
 					borderRadius: '20px',
 					margin: '0 auto',
@@ -27,7 +27,7 @@ const Tokenomics = () => {
 			>
 				<Typography
 					sx={{
-						fontSize: '28px',
+						fontSize: { xs: '22px', md: '28px' },
 						textAlign: 'center',
 						fontWeight: 600,
 						marginTop: '16px',
@@ -38,7 +38,7 @@ const Tokenomics = () => {
 
 				<Typography
 					sx={{
-						fontSize: '48px',
+						fontSize: { xs: '18', md: '48px' },
 						textAlign: 'center',
 						fontWeight: 600,
 						marginTop: '16px',

@@ -35,6 +35,6 @@ export const Title = styled(Typography)(({ theme }) => ({
 	textAlign: 'center',
 
 	[theme.breakpoints.down('md')]: {
-		fontSize: '24px',
+		fontSize: '36px',
 	},
 }));

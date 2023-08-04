@@ -23,18 +23,35 @@ const ProgressWrapper = styled(Box)(({ theme }) => ({
 	},
 }));
 
-const ClaimItem = styled(Box)(() => ({
+const ProgressText = styled(Typography)(({ theme }) => ({
+	color: '#fff',
+	fontSize: '20px',
+
+	[theme.breakpoints.down('md')]: {
+		fontSize: '16px',
+	},
+}));
+
+const ClaimItem = styled(Box)(({ theme }) => ({
 	display: 'flex',
 	justifyContent: 'space-around',
 	alignItems: 'center',
 	width: '600px',
-	minWidth: '300px',
+	minWidth: { xs: '100%', md: '350px' },
 	height: '300px',
 	padding: '24px',
 	borderRadius: '20px',
 	backgroundColor: 'transparent',
 	border: '4px solid #fff',
+	[theme.breakpoints.down('md')]: {
+		justifyContent: 'center',
+		alignItems: 'center',
+		gap: '10px',
+		padding: '5px',
+	},
 }));
+
+const Text = styled(Typography)(() => ({}));
 
 const GetNASA = () => {
 	const [totalProgress, setTotalProgress] = useState(100);
@@ -42,13 +59,16 @@ const GetNASA = () => {
 	const [explorerProgress, setExplorerProgress] = useState(20);
 
 	return (
-		<Container id="getNASA" sx={{ padding: '100px 0' }}>
+		<Container
+			id="getNASA"
+			sx={{ padding: { xs: '100px 20px', md: '100px 0' } }}
+		>
 			<Title>Get $NASA</Title>
 
 			<ProgressWrapper>
-				<Typography mb={1} pt={7} sx={{ color: '#fff' }}>
+				<ProgressText mb={1} pt={7}>
 					Total progress of token distribution:
-				</Typography>
+				</ProgressText>
 				<ProgressBar
 					className="wrapper"
 					completed={totalProgress}
@@ -60,9 +80,9 @@ const GetNASA = () => {
 			</ProgressWrapper>
 
 			<ProgressWrapper>
-				<Typography mb={1} pt={7} sx={{ color: '#fff' }}>
+				<ProgressText mb={1} pt={7}>
 					White List
-				</Typography>
+				</ProgressText>
 				<ProgressBar
 					className="wrapper"
 					completed={twitterProgress}
@@ -77,9 +97,7 @@ const GetNASA = () => {
 					marginTop: '56px',
 				}}
 			>
-				<Typography mb={1} sx={{ color: '#fff' }}>
-					Explorer
-				</Typography>
+				<ProgressText mb={1}>Explorer</ProgressText>
 				<ProgressBar
 					className="wrapper"
 					completed={explorerProgress}
@@ -92,20 +110,31 @@ const GetNASA = () => {
 			<Stack
 				direction="row"
 				justifyContent="space-between"
-				sx={{ paddingTop: '56px' }}
+				sx={{
+					paddingTop: '56px',
+					flexWrap: { xs: 'wrap' },
+					gap: { xs: '20px' },
+				}}
 			>
 				<ClaimItem>
 					<Box
 						sx={{
+							textAlign: 'center',
 							img: {
-								width: '200px',
-								height: '200px',
+								width: { xs: '60px', md: '200px' },
+								height: { xs: '60px', md: '200px' },
 								borderRadius: '24px',
 							},
 						}}
 					>
 						<img src={TwitterBlue} alt="" />
-						<Typography sx={{ color: '#fff', textAlign: 'center' }}>
+						<Typography
+							sx={{
+								color: '#fff',
+								textAlign: 'center',
+								fontSize: { xs: '16px' },
+							}}
+						>
 							Twitter Blue
 						</Typography>
 					</Box>
@@ -114,10 +143,10 @@ const GetNASA = () => {
 						direction="column"
 						spacing={2}
 						justifyContent="center"
-						sx={{ height: '100%' }}
+						sx={{ height: { xs: 'unset', md: '100%' } }}
 					>
 						<Box>
-							<Typography sx={{ color: '#fff' }}>
+							<Typography sx={{ color: '#fff', fontSize: { xs: '16px' } }}>
 								FREE Claim or 6 USDC(75% off)
 							</Typography>
 						</Box>
@@ -133,12 +162,14 @@ const GetNASA = () => {
 						</Button>
 					</Stack>
 				</ClaimItem>
+
 				<ClaimItem>
 					<Box
 						sx={{
+							textAlign: 'center',
 							img: {
-								width: '200px',
-								height: '200px',
+								width: { xs: '60px', md: '200px' },
+								height: { xs: '60px', md: '200px' },
 								borderRadius: '24px',
 							},
 						}}
@@ -153,10 +184,14 @@ const GetNASA = () => {
 						direction="column"
 						justifyContent="center"
 						spacing={2}
-						sx={{ height: '100%' }}
+						sx={{
+							width: '100%',
+							maxWidth: '242px',
+							height: { xs: 'unset', md: '100%' },
+						}}
 					>
 						<Box>
-							<Typography sx={{ color: '#fff' }}>
+							<Typography sx={{ color: '#fff', textAlign: { xs: 'center' } }}>
 								Pay 8 USDC for $NASA
 							</Typography>
 						</Box>

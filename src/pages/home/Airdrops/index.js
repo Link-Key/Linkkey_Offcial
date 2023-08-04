@@ -69,10 +69,18 @@ const itemsList = [
 
 const Airdrops = () => {
 	return (
-		<Container sx={{ paddingTop: '160px' }}>
+		<Container sx={{ paddingTop: { xs: '60px', md: '160px' } }}>
 			<Title>Airdrops</Title>
 
-			<Box sx={{ img: { width: '100%', height: '100%', paddingTop: '100px' } }}>
+			<Box
+				sx={{
+					img: {
+						width: '100%',
+						height: '100%',
+						paddingTop: { xs: '20px', md: '100px' },
+					},
+				}}
+			>
 				<img src={AirdropsImg} alt="" />
 			</Box>
 
@@ -163,18 +171,24 @@ const Airdrops = () => {
 			<Box>
 				<Stack
 					direction="row"
+					alignItems="center"
 					spacing={1}
-					mt={10}
+					mt={{ xs: 5, md: 10 }}
 					sx={{
 						svg: {
+							width: { xs: '16px' },
+							height: { xs: '16px' },
 							color: '#fff',
 						},
 					}}
 				>
 					<AssignmentLateOutlinedIcon />
-					<Typography> Note:</Typography>
+					<Typography sx={{ fontSize: { xs: '12px', md: '20px' } }}>
+						{' '}
+						Note:
+					</Typography>
 				</Stack>
-				<Typography>
+				<Typography sx={{ fontSize: { xs: '12px', md: '20px' } }}>
 					{`- 70% of token revenue + 5-10% supply of $NASA => uniswap liquidity
 					pool. `}
 				</Typography>

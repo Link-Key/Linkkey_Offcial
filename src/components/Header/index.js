@@ -15,11 +15,12 @@ import { ChevronLeft } from '@mui/icons-material';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import { useConnectModal } from '@rainbow-me/rainbowkit';
 import { useAccount, useDisconnect } from 'wagmi';
-import AccountBalanceWalletIcon from '@mui/icons-material/AccountBalanceWallet';
+
 import { scrollToAnchor, splitAddress } from '../../utils';
 import LogoCom from '../LogoCom';
 import { toast } from 'react-hot-toast';
 import { useState } from 'react';
+import ConnectWallet from '../ConnectWallet';
 
 const HeaderWrapper = styled(Box)(() => ({
 	position: 'absolute',
@@ -41,12 +42,6 @@ const LinkText = styled(Link)(() => ({
 	color: '#fff',
 	fontWeight: 600,
 	fontSize: '20px',
-}));
-
-const ConnectButton = styled(Button)(() => ({
-	svg: {
-		marginRight: '5px',
-	},
 }));
 
 const links = [
@@ -71,7 +66,7 @@ const Header = () => {
 	};
 
 	return (
-		<Container sx={{ position: 'relative' }}>
+		<Container>
 			<HeaderWrapper
 				sx={{
 					display: {
@@ -118,25 +113,7 @@ const Header = () => {
 						/>
 					</Link>
 
-					{isConnected ? (
-						<ConnectButton
-							onClick={() => {
-								disconnect();
-							}}
-						>
-							<AccountBalanceWalletIcon />
-							{splitAddress(address)}
-						</ConnectButton>
-					) : (
-						<ConnectButton
-							onClick={() => {
-								openConnectModal();
-							}}
-						>
-							<AccountBalanceWalletIcon />
-							Connect wallet
-						</ConnectButton>
-					)}
+					<ConnectWallet />
 				</Stack>
 			</HeaderWrapper>
 			{/* Mobile */}
@@ -146,8 +123,11 @@ const Header = () => {
 				alignItems="center"
 				sx={{
 					position: 'absolute',
+					left: 0,
+					padding: '0 20px',
 					width: '100%',
 					display: { xs: 'flex', sm: 'none' },
+					zIndex: 2,
 				}}
 				mt="20px"
 			>

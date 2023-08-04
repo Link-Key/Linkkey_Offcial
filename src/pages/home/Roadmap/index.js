@@ -1,4 +1,4 @@
-import { Box, Container, styled } from '@mui/material';
+import { Box, Container, styled, useMediaQuery } from '@mui/material';
 import React from 'react';
 import { Title } from '../../../components/CommonUI';
 import RocketIcon from '@mui/icons-material/Rocket';
@@ -13,7 +13,7 @@ const DotStyle = {
 	width: '15px',
 	height: '15px',
 	background: '#fff',
-	marginLeft: '-7px',
+	// marginLeft: '-7px',
 };
 
 const times = [
@@ -37,9 +37,13 @@ const times = [
 ];
 
 const Roadmap = () => {
+	const isXs = useMediaQuery('(max-width:600px)');
+
+	console.log('isXs:', isXs);
+
 	return (
-		<Container sx={{ paddingTop: '180px' }}>
-			<Title sx={{ marginBottom: '80px' }}>Roadmap</Title>
+		<Container sx={{ paddingTop: { xs: '60px', md: '180px' } }}>
+			<Title sx={{ marginBottom: { xs: '20px', md: '80px' } }}>Roadmap</Title>
 
 			<VerticalTimeline>
 				{times.map((time) => (
@@ -56,7 +60,7 @@ const Roadmap = () => {
 						}}
 						date={time.time}
 						contentArrowStyle={{ display: 'none' }}
-						iconStyle={DotStyle}
+						iconStyle={{ ...DotStyle, marginLeft: isXs ? '13px' : '-7px' }}
 					>
 						<p style={{ margin: '0', padding: '', textAlign: 'center' }}>
 							{time.content}
@@ -68,14 +72,14 @@ const Roadmap = () => {
 			<Box
 				sx={{
 					width: '100%',
-					textAlign: 'center',
+					textAlign: { xs: 'left', md: 'center' },
+					marginLeft: { xs: '10px', md: '-0px' },
 					transform: 'rotateX(180deg)',
 				}}
 			>
 				<RocketIcon
 					sx={{
 						color: '#fff',
-						textAlign: 'center',
 						margin: '0 auto',
 						fontSize: '36px',
 					}}

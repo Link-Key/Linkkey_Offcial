@@ -24,6 +24,7 @@ const Home = () => {
 				position: 'relative',
 				width: '100%',
 				margin: '0 auto',
+				// transform: 'translateY(-62px)',
 			}}
 		>
 			<StarsCanvas />
