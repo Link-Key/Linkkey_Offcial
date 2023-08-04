@@ -48,9 +48,9 @@ const darkTheme = responsiveFontSizes(
 					disableGutters: true,
 				},
 				styleOverrides: {
-					root: {
-						padding: 0,
-					},
+					root: ({ theme }) => ({
+						padding: '0 40px',
+					}),
 				},
 			},
 		},
