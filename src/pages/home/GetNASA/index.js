@@ -61,7 +61,7 @@ const GetNASA = () => {
 	return (
 		<Container
 			id="getNASA"
-			sx={{ padding: { xs: '100px 20px', md: '100px 0' } }}
+			sx={{ padding: { xs: '100px 10px', md: '100px 0' } }}
 		>
 			<Title>Get $NASA</Title>
 

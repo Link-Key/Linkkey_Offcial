@@ -50,6 +50,10 @@ const darkTheme = responsiveFontSizes(
 				styleOverrides: {
 					root: ({ theme }) => ({
 						padding: '0 40px',
+
+						[theme.breakpoints.down('md')]: {
+							padding: '0 10px',
+						},
 					}),
 				},
 			},
