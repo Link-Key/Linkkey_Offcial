@@ -1,10 +1,10 @@
 import { configureChains, createConfig } from 'wagmi';
-import { bsc, bscTestnet } from 'wagmi/chains';
+import { arbitrum, arbitrumGoerli } from 'wagmi/chains';
 import { publicProvider } from 'wagmi/providers/public';
 import { getDefaultWallets } from '@rainbow-me/rainbowkit';
 
 const { chains, publicClient, webSocketPublicClient } = configureChains(
-	[bsc, bscTestnet],
+	[arbitrumGoerli, arbitrum],
 	[publicProvider()]
 );
 const projectId = 'NASA Coin | $NASA';
