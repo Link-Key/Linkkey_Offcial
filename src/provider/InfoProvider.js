@@ -11,9 +11,25 @@ import whiteList from '../assets/excel/nasa_whitelist.xlsx';
 import * as XLSX from 'xlsx';
 import { MerkleTree } from 'merkletreejs';
 
-import { getClaimed, getPrice, getScore, isTwitterBlue } from '../api/contract';
-import { formatEther, fromHex, keccak256 } from 'viem';
+import {
+	getClaimed,
+	getPrice,
+	getScore,
+	getScorePer,
+	isTwitterBlue,
+} from '../api/contract';
+import {
+	formatEther,
+	formatUnits,
+	fromHex,
+	keccak256,
+	parseGwei,
+	parseUnits,
+} from 'viem';
 import CheckTwitterBlueDialog from '../components/CheckTwitterBlueDialog';
+
+import { ethers } from 'ethers';
+import { weiFormatToEth } from '../utils';
 
 const InfoContext = createContext();
 
@@ -28,6 +44,8 @@ const InfoProvider = ({ children }) => {
 	const [price, setPrice] = useState('0');
 	const [score, setScore] = useState({ eth: '0', blue: '0', explorer: '0' });
 	const [claimed, setClaimed] = useState(false);
+
+	console.log('price:', price);
 
 	const [open, setOpen] = useState(false);
 
@@ -70,18 +88,41 @@ const InfoProvider = ({ children }) => {
 	}, [address, signer, proofState]);
 
 	const getPriceFn = useCallback(async () => {
-		const value = await getPrice(1, proofState, signer);
+		const value = await getPrice(address, 1, proofState, signer);
 
 		setPrice(formatEther(fromHex(value._hex, 'bigint')));
-	}, [proofState, signer]);
+	}, [address, proofState, signer]);
+
+	const getScorePerFn = useCallback(
+		async (amount) => {
+			const value = await getScorePer(amount, signer);
+			return value;
+		},
+		[signer]
+	);
 
 	const getScoreFn = useCallback(async () => {
 		const value = await getScore(signer);
+
+		console.log('value:', fromHex(value[1]._hex, 'bigint').toString());
+		console.log('objec:', '9999999999990000000000000');
+
+		console.log('hex:', ethers.BigNumber.from('9999999999990000000000000'));
+		console.log(
+			'equal:',
+			fromHex(value[1]._hex, 'bigint').toString() ===
+				'9999999999990000000000000'
+		);
+
+		const explorerVal = await getScorePerFn(value[1]);
+
+		console.log('explorerVal:', fromHex(explorerVal, 'number'));
+
 		if (value) {
 			setScore({
-				eth: formatEther(fromHex(value[0]._hex, 'bigint')),
+				explorer: fromHex(value[0]._hex, 'bigint'),
 				blue: formatEther(fromHex(value[1]._hex, 'bigint')),
-				explorer: formatEther(fromHex(value[2]._hex, 'bigint')),
+				eth: formatEther(fromHex(value[2]._hex, 'bigint')),
 			});
 		}
 	}, [signer]);
@@ -97,9 +138,17 @@ const InfoProvider = ({ children }) => {
 			getPriceFn();
 			getScoreFn();
 			getClaimedFn();
+			getScorePerFn();
 			setOpen(true);
 		}
-	}, [isTwitterBlueFn, getPriceFn, getScoreFn, getClaimedFn, address]);
+	}, [
+		isTwitterBlueFn,
+		getPriceFn,
+		getScoreFn,
+		getScorePerFn,
+		getClaimedFn,
+		address,
+	]);
 
 	useEffect(() => {
 		getMerkleTreeRoot();

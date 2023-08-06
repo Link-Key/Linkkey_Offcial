@@ -19,8 +19,6 @@ const CheckTwitterBlueDialog = ({
 	isBlue,
 	onClose,
 }) => {
-	console.log('checkBlueLoading:', checkBlueLoading);
-
 	return (
 		<Dialog
 			open={open}

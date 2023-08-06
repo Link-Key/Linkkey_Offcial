@@ -1,13 +1,11 @@
 import { Box, Stack, Typography, styled } from '@mui/material';
-import React, { useCallback, useState } from 'react';
+import React, { useState } from 'react';
 import { toast } from 'react-hot-toast';
 import Explorer from '../../../assets/images/explorer.png';
 import { LoadingButton } from '@mui/lab';
-import { buy } from '../../../api/contract';
-import { useEthersSigner } from '../../../hook/useEthersSigner';
-import { useAccount, useChainId } from 'wagmi';
+
+import { useAccount } from 'wagmi';
 import { useInfo } from '../../../provider/InfoProvider';
-import { ethFormatToWei } from '../../../utils';
 import BuyDialog from '../../../components/BuyDialog';
 
 const ClaimItem = styled(Box)(({ theme }) => ({
@@ -30,10 +28,9 @@ const ClaimItem = styled(Box)(({ theme }) => ({
 }));
 
 const ExplorerClaim = () => {
-	const chainId = useChainId();
 	const { address } = useAccount();
 
-	const { price, score, isBlue, claimed, proofState, getScoreFn } = useInfo();
+	const { isBlue } = useInfo();
 	const [open, setOpen] = useState(false);
 
 	return (
@@ -66,7 +63,7 @@ const ExplorerClaim = () => {
 			>
 				<Box>
 					<Typography sx={{ color: '#fff', textAlign: { xs: 'center' } }}>
-						Pay 0.0042 ETH for $NASA
+						Pay 0.042 ETH for $NASA
 					</Typography>
 				</Box>
 				<LoadingButton

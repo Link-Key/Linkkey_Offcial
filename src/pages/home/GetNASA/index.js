@@ -3,10 +3,9 @@ import { Title } from '../../../components/CommonUI';
 import ProgressBar from '@ramonak/react-progress-bar';
 import { useInfo } from '../../../provider/InfoProvider';
 import { useAccount, useChainId } from 'wagmi';
-import { parseGwei, toHex } from 'viem';
+
 import TwitterClaim from './TwitterClaim';
 import ExplorerClaim from './ExplorerClaim';
-import BuyDialog from '../../../components/BuyDialog';
 
 const ProgressWrapper = styled(Box)(({ theme }) => ({
 	position: 'relative',
@@ -94,7 +93,6 @@ const GetNASA = () => {
 
 				<ExplorerClaim />
 			</Stack>
-			<BuyDialog />
 		</Container>
 	);
 };

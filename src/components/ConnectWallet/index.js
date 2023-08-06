@@ -4,7 +4,6 @@ import { useAccount, useDisconnect } from 'wagmi';
 import { splitAddress } from '../../utils';
 import AccountBalanceWalletIcon from '@mui/icons-material/AccountBalanceWallet';
 import { Button, styled } from '@mui/material';
-import CheckTwitterBlueDialog from '../CheckTwitterBlueDialog';
 
 const ConnectButton = styled(Button)(({ theme }) => ({
 	svg: {

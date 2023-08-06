@@ -38,8 +38,6 @@ const TwitterClaim = () => {
 	const { price, score, isBlue, claimed, proofState, getScoreFn } = useInfo();
 	const [open, setOpen] = useState(false);
 
-	console.log('claimed:', claimed);
-
 	const claimBlue = useCallback(async () => {
 		setClaimLoading(true);
 		try {
@@ -93,7 +91,7 @@ const TwitterClaim = () => {
 			>
 				<Box>
 					<Typography sx={{ color: '#fff', fontSize: { xs: '16px' } }}>
-						FREE Claim or 0.0032 ETH(75% off)
+						FREE Claim or 0.032 ETH(75% off)
 					</Typography>
 				</Box>
 				<LoadingButton

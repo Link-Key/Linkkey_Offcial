@@ -51,6 +51,10 @@ const BuyDialog = ({ open, onClose }) => {
 		const val = parseGwei(price) * parseGwei(value);
 		return formatEther(val);
 	}, [price, value]);
+	const handleClose = () => {
+		onClose();
+		setValue('');
+	};
 
 	const explorerBuy = useCallback(async () => {
 		setLoading(true);
@@ -65,6 +69,7 @@ const BuyDialog = ({ open, onClose }) => {
 
 			if (transaction?.status === 1) {
 				toast.success('success!');
+				handleClose();
 				getScoreFn();
 			}
 		} catch (error) {
@@ -79,8 +84,6 @@ const BuyDialog = ({ open, onClose }) => {
 		}
 	}, [proofState, value, calPrice, signer]);
 
-	console.log('value:', Number(value));
-
 	const handleChange = (val) => {
 		setValue(val);
 	};
@@ -88,7 +91,7 @@ const BuyDialog = ({ open, onClose }) => {
 	return (
 		<Dialog
 			open={open}
-			onClose={onClose}
+			onClose={handleClose}
 			sx={{
 				'& .MuiPaper-root': {
 					width: '100%',
@@ -102,7 +105,7 @@ const BuyDialog = ({ open, onClose }) => {
 				{onClose ? (
 					<IconButton
 						aria-label="close"
-						onClick={onClose}
+						onClick={handleClose}
 						sx={{
 							position: 'absolute',
 							right: 8,
@@ -143,7 +146,7 @@ const BuyDialog = ({ open, onClose }) => {
 						},
 					}}
 				>
-					<Text>{`Price: ${price}`}</Text>
+					<Text>{`Price: ${calPrice}`}</Text>
 					<ETHSvg />
 				</Stack>
 				<Stack

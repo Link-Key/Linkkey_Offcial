@@ -1,6 +1,5 @@
 import {
 	Box,
-	Button,
 	Container,
 	IconButton,
 	Link,
@@ -13,10 +12,8 @@ import {
 import DehazeIcon from '@mui/icons-material/Dehaze';
 import { ChevronLeft } from '@mui/icons-material';
 import TwitterIcon from '@mui/icons-material/Twitter';
-import { useConnectModal } from '@rainbow-me/rainbowkit';
-import { useAccount, useDisconnect } from 'wagmi';
 
-import { scrollToAnchor, splitAddress } from '../../utils';
+import { scrollToAnchor } from '../../utils';
 import LogoCom from '../LogoCom';
 import { toast } from 'react-hot-toast';
 import { useState } from 'react';
@@ -51,10 +48,6 @@ const links = [
 ];
 
 const Header = () => {
-	const { isConnected, address } = useAccount();
-	const { disconnect } = useDisconnect();
-	const { openConnectModal } = useConnectModal();
-
 	const [open, setOpen] = useState(false);
 
 	const handleDrawerOpen = () => {
