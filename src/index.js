@@ -8,7 +8,10 @@ import { ThemeProvider } from '@mui/system';
 import { darkTheme } from './config/theme';
 import { WagmiConfig } from 'wagmi';
 import { AppInfo, chains, wagmiConfig } from './config/client';
-import { RainbowKitProvider } from '@rainbow-me/rainbowkit';
+import {
+	RainbowKitProvider,
+	darkTheme as darkRainbow,
+} from '@rainbow-me/rainbowkit';
 
 import 'react-toastify/dist/ReactToastify.css';
 import 'react-step-progress-bar/styles.css';
@@ -24,7 +27,11 @@ root.render(
 		<ThemeProvider theme={darkTheme}>
 			<BrowserRouter>
 				<WagmiConfig config={wagmiConfig}>
-					<RainbowKitProvider chains={chains} appInfo={AppInfo}>
+					<RainbowKitProvider
+						theme={darkRainbow()}
+						chains={chains}
+						appInfo={AppInfo}
+					>
 						<InfoProvider>
 							<App />
 							<Toaster

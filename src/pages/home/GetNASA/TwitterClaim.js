@@ -7,6 +7,7 @@ import { claim } from '../../../api/contract';
 import { useEthersSigner } from '../../../hook/useEthersSigner';
 import { useAccount, useChainId } from 'wagmi';
 import { useInfo } from '../../../provider/InfoProvider';
+import BuyDialog from '../../../components/BuyDialog';
 
 const ClaimItem = styled(Box)(({ theme }) => ({
 	display: 'flex',
@@ -35,6 +36,9 @@ const TwitterClaim = () => {
 	const [claimLoading, setClaimLoading] = useState(false);
 
 	const { price, score, isBlue, claimed, proofState, getScoreFn } = useInfo();
+	const [open, setOpen] = useState(false);
+
+	console.log('claimed:', claimed);
 
 	const claimBlue = useCallback(async () => {
 		setClaimLoading(true);
@@ -94,20 +98,27 @@ const TwitterClaim = () => {
 				</Box>
 				<LoadingButton
 					loading={claimLoading}
-					// disabled={!isBlue}
+					disabled={!isBlue}
 					onClick={() => {
 						if (!address) {
 							toast('Please connect wallet!', {
 								icon: '❗',
 							});
 						} else {
-							claimBlue();
+							claimed ? setOpen(true) : claimBlue();
 						}
 					}}
 				>
-					Claim
+					{claimed ? 'Buy' : 'Claim'}
 				</LoadingButton>
 			</Stack>
+
+			<BuyDialog
+				open={open}
+				onClose={() => {
+					setOpen(false);
+				}}
+			/>
 		</ClaimItem>
 	);
 };

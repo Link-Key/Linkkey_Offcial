@@ -1,3 +1,4 @@
+import { LoadingButton } from '@mui/lab';
 import { Typography, styled } from '@mui/material';
 
 export const LinerFontStyles = {
@@ -36,5 +37,22 @@ export const Title = styled(Typography)(({ theme }) => ({
 
 	[theme.breakpoints.down('md')]: {
 		fontSize: '36px',
+	},
+}));
+
+export const BlackButton = styled(LoadingButton)(() => ({
+	width: '100%',
+	backgroundColor: '#101010',
+	color: '#fff',
+	fontSize: '16px',
+	marginTop: '20px',
+
+	'&:hover': {
+		backgroundColor: '#101010',
+		color: '#fff',
+	},
+	'&.Mui-disabled': {
+		backgroundColor: '#9a9a9a',
+		color: '#fff',
 	},
 }));

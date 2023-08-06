@@ -8,6 +8,7 @@ import { useEthersSigner } from '../../../hook/useEthersSigner';
 import { useAccount, useChainId } from 'wagmi';
 import { useInfo } from '../../../provider/InfoProvider';
 import { ethFormatToWei } from '../../../utils';
+import BuyDialog from '../../../components/BuyDialog';
 
 const ClaimItem = styled(Box)(({ theme }) => ({
 	display: 'flex',
@@ -31,37 +32,9 @@ const ClaimItem = styled(Box)(({ theme }) => ({
 const ExplorerClaim = () => {
 	const chainId = useChainId();
 	const { address } = useAccount();
-	const signer = useEthersSigner({ chainId });
 
 	const { price, score, isBlue, claimed, proofState, getScoreFn } = useInfo();
-	const [exploreLoading, setExploreLoading] = useState(false);
-
-	const explorerBuy = useCallback(async () => {
-		setExploreLoading(true);
-		try {
-			const transaction = await buy(
-				1,
-				proofState,
-
-				ethFormatToWei(price),
-				signer
-			);
-
-			if (transaction?.status === 1) {
-				toast.success('success!');
-				getScoreFn();
-			}
-		} catch (error) {
-			console.log('error:', error);
-			if (error?.code && error?.reason) {
-				toast.error(error.reason);
-			} else {
-				toast.error('Transaction fail');
-			}
-		} finally {
-			setExploreLoading(false);
-		}
-	}, [proofState, price, signer]);
+	const [open, setOpen] = useState(false);
 
 	return (
 		<ClaimItem>
@@ -97,20 +70,27 @@ const ExplorerClaim = () => {
 					</Typography>
 				</Box>
 				<LoadingButton
-					loading={exploreLoading}
+					disabled={isBlue}
 					onClick={() => {
 						if (!address) {
 							toast('Please connect wallet!', {
 								icon: '❗',
 							});
 						} else {
-							explorerBuy();
+							setOpen(true);
 						}
 					}}
 				>
 					Buy
 				</LoadingButton>
 			</Stack>
+
+			<BuyDialog
+				open={open}
+				onClose={() => {
+					setOpen(false);
+				}}
+			/>
 		</ClaimItem>
 	);
 };

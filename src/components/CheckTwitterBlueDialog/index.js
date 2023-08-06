@@ -5,6 +5,7 @@ import ErrorOutlineIcon from '@mui/icons-material/ErrorOutline';
 import React from 'react';
 import { useInfo } from '../../provider/InfoProvider';
 import { LoadingButton } from '@mui/lab';
+import { BlackButton } from '../CommonUI';
 
 const NoticeText = styled(Typography)(() => ({
 	color: '#000',
@@ -23,12 +24,13 @@ const CheckTwitterBlueDialog = ({
 	return (
 		<Dialog
 			open={open}
-			onClose={onClose}
+			disableEscapeKeyDown={true}
 			sx={{
 				'& .MuiPaper-root': {
 					width: '100%',
 					maxWidth: '430px',
 					backgroundColor: 'white',
+					borderRadius: '20px',
 				},
 			}}
 		>
@@ -60,27 +62,9 @@ const CheckTwitterBlueDialog = ({
 				</Stack>
 
 				<Box sx={{ textAlign: 'center' }}>
-					<LoadingButton
-						disabled={checkBlueLoading}
-						sx={{
-							backgroundColor: 'black',
-							color: '#fff',
-							fontSize: '16px',
-							marginTop: '20px',
-
-							'&:hover': {
-								backgroundColor: 'black',
-								color: '#fff',
-							},
-							'&.Mui-disabled': {
-								backgroundColor: '#9a9a9a',
-								color: '#fff',
-							},
-						}}
-						onClick={onClose}
-					>
+					<BlackButton disabled={checkBlueLoading} onClick={onClose}>
 						Confirm
-					</LoadingButton>
+					</BlackButton>
 				</Box>
 			</Box>
 		</Dialog>
