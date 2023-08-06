@@ -1,3 +1,5 @@
+import { parseEther } from 'ethers/lib/utils';
+
 export const splitAddress = (address, start = 5, end = -4) => {
 	return (
 		(address && address.slice(0, start) + '...' + address.slice(end)) || ''
@@ -13,4 +15,11 @@ export const scrollToAnchor = (anchorName) => {
 			anchorElement.scrollIntoView({ block: 'start', behavior: 'smooth' });
 		}
 	}
+};
+
+export const ethFormatToWei = (value) => {
+	if (typeof value === 'string') {
+		return parseEther(value);
+	}
+	return parseEther(value.toString());
 };

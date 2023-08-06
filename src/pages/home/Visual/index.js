@@ -55,8 +55,6 @@ const Visual = () => {
 		expiryTimestamp: moment('2023-08-2').valueOf(),
 	});
 
-	console.log('moment:', moment('2023-08-2').valueOf());
-
 	return (
 		<Container
 			sx={{

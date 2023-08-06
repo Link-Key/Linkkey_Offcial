@@ -39,8 +39,6 @@ const times = [
 const Roadmap = () => {
 	const isXs = useMediaQuery('(max-width:600px)');
 
-	console.log('isXs:', isXs);
-
 	return (
 		<Container sx={{ paddingTop: { xs: '60px', md: '180px' } }}>
 			<Title sx={{ marginBottom: { xs: '20px', md: '80px' } }}>Roadmap</Title>

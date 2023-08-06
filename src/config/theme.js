@@ -26,6 +26,16 @@ const darkTheme = responsiveFontSizes(
 			},
 		},
 		components: {
+			MuiLoadingButton: {
+				styleOverrides: {
+					root: {
+						'&.Mui-disabled': {
+							borderColor: '#ffffff4d',
+							cursor: 'not-allowed',
+						},
+					},
+				},
+			},
 			MuiButton: {
 				styleOverrides: {
 					root: {

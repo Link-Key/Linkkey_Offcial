@@ -16,7 +16,5 @@ export const linkList = {
 		'https://linkkey.notion.site/About-Investment-5d4a907caa464810af1a550118cc3249',
 };
 
-export const contractAdd = {
-	nasa: '0xD2c13947A19F3D1b48C6b7b78b88F2E1d86f38c8',
-	purchase: '0xeE404Eb069eBB905724DeAa633D2f1ee1D8Cc1b3',
-};
+export const nasaAdd = '0xD2c13947A19F3D1b48C6b7b78b88F2E1d86f38c8';
+export const purchaseAdd = '0xeE404Eb069eBB905724DeAa633D2f1ee1D8Cc1b3';

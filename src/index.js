@@ -16,6 +16,7 @@ import './index.css';
 import '@rainbow-me/rainbowkit/styles.css';
 import 'inter-ui/inter.css';
 import { Toaster } from 'react-hot-toast';
+import { InfoProvider } from './provider/InfoProvider';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -24,15 +25,17 @@ root.render(
 			<BrowserRouter>
 				<WagmiConfig config={wagmiConfig}>
 					<RainbowKitProvider chains={chains} appInfo={AppInfo}>
-						<App />
-						<Toaster
-							containerStyle={{ fontWeight: 600 }}
-							toastOptions={{
-								style: {
-									fontWeight: 600,
-								},
-							}}
-						/>
+						<InfoProvider>
+							<App />
+							<Toaster
+								containerStyle={{ fontWeight: 600 }}
+								toastOptions={{
+									style: {
+										fontWeight: 600,
+									},
+								}}
+							/>
+						</InfoProvider>
 					</RainbowKitProvider>
 				</WagmiConfig>
 			</BrowserRouter>
